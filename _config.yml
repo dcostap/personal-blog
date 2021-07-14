@@ -3,8 +3,8 @@ title:       Darío Costa's blog
 email:       dariocostapena@gmail.com
 author:      Darío Costa
 description: ""
-baseurl:     ""
-url:         ""
+baseurl:     "/personal-blog"
+url:         "https://dcostap.github.io"
 date_format: "%b %-d, %Y"
 header_pages:
 #  - about.md
