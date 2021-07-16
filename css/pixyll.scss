@@ -34,3 +34,51 @@
 @import 'gists';
 @import 'measure';
 @import 'pagination';
+
+
+blockquote {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+    width: 600px;
+    margin: 1.5em 2em;
+    padding: 0.35em 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #383838;
+}
+
+blockquote:before {
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 70px;
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    color: #757575;
+}
+
+blockquote cite {
+    color: #b1b1b1;
+    font-size: 18px;
+    display: block;
+    margin-top: 5px;
+}
+
+blockquote cite:before {
+    content: "\2014 \2009";
+}
+
+// blockquote:after {
+//     font-family: Georgia, serif;
+//     position: absolute;
+//    /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+//     float:right;
+//     color: #858585;
+//     font-size: 70px;
+//     line-height: 1;
+//     right:0;
+//     bottom:-0.1em;
+//     content: "\201D";
+// }
