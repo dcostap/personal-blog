@@ -54,7 +54,7 @@ fun result() =
 
 > This is completely legitimate Kotlin code.
 
-"Yes, you may not believe it, but it's actual Kotlin code."
+**"Yes, you may not believe it, but it's actual Kotlin code."**
 
 But is it really a good practice to reach such limits with a programming language?
 
@@ -77,11 +77,13 @@ I learned what kind of languages are generally more hated, and which ones are lo
 
 ## The beauty of simple code
 
-I see a beauty in simple code. I love the feeling of writing your first code lines when starting a project, before everything turns into a complex and unreadable mess.
+I see beauty in simple code. I love the feeling of writing your first code lines when starting a project, before everything turns into a complex and unreadable mess.
 
 And suddenly, I am starting to feel attracted to simpler languages like C or Jai.
 
-I look forward to the day Jai releases, but I will probably still go back to Kotlin. After all, the complexity it introduces is still optional, and its language design does focus on reducing boilerplate and redundancy. It's up to the developer to not use too much of the advanced features, that are probably unnecessary.
+I look forward to the day Jai releases, but I will probably still go back to Kotlin. After all, the complexity it introduces is still optional, and its language design does focus on reducing boilerplate and redundancy.
+
+It's up to the developer to not use too much of the advanced features, that are probably unnecessary.
 
 <blockquote>
   <p>
