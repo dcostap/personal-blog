@@ -15,7 +15,7 @@ h6 {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
   line-height: $heading-line-height;
-  margin-top: 1em;
+  margin-top: 1.4em;
   margin-bottom: .5em;
 }
 
@@ -23,7 +23,7 @@ p,
 dl,
 ol,
 ul {
-  font-size: .95rem;
+  font-size: $base-font-size;
   line-height: 1.7;
   margin-top: 0;
   margin-bottom: $space-2;
@@ -38,7 +38,7 @@ pre,
 code,
 samp {
   font-family: $monospace-font-family;
-  font-size: inherit;
+  font-size: $base-font-size;
 }
 
 pre {
