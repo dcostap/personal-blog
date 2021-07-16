@@ -3,13 +3,13 @@ layout:     post
 title:      The beauty of simplicity in programming
 ---
 
-[Kotlin](https://kotlinlang.org/) is an amazing programming language. I've been using it for close to 4 years now, and after all this time I've only got a few complaints about the design of the language.
+[Kotlin](https://kotlinlang.org/) is an amazing programming language. I've been using it to code all my hobby projects for close to 4 years now, and after all this time I would only change 2 or 3 small things that mildly annoy me about its language design.
 
 However, hearing about the new [Jai programming language](https://github.com/BSVino/JaiPrimer/blob/master/JaiPrimer.md) and the reasonings behind its inception (explained by the creator Jon Blow in some very interesting [videos](https://www.youtube.com/watch?v=TH9VCN6UkyQ) and [conferences](https://www.youtube.com/watch?v=uZgbKrDEzAs)), really got me thinking about the value - *and beauty* - of simplicity in programming.
 
 ## I love Kotlin, but damn is it complex
 
-Kotlin is what we may call a **really complex language**. It's one of these modern programming languages that can do - *or try to do* - just about everything.
+Kotlin is what I'd call a **really complex language**. It's one of these modern programming languages that can do - *or try to do* - just about everything.
 
 They are object oriented, but also functional (_because it's trendy_). But with most of them you could also theoreticallly do some procedural style programming.
 
@@ -83,7 +83,7 @@ And suddenly, I am starting to feel attracted to simpler languages like C or Jai
 
 I look forward to the day Jai releases, but I will probably still go back to Kotlin. After all, the complexity it introduces is still optional, and its language design does focus on reducing boilerplate and redundancy.
 
-It's up to the developer to not use too much of the advanced features, that are probably unnecessary.
+It's up to the developer to not use too many of the advanced features, that are probably unnecessary.
 
 <blockquote>
   <p>
