@@ -5,7 +5,7 @@ title:      The beauty of simplicity in programming
 
 [Kotlin](https://kotlinlang.org/) is an amazing programming language. I've been using it for close to 4 years now, and after all this time I've only got a few complaints about the design of the language.
 
-However, hearing about the new [Jai programming language](https://github.com/BSVino/JaiPrimer/blob/master/JaiPrimer.md) and the reasonings behind its inception (explained by the creator Jon Blow in some very interesting videos and conferences), really got me thinking about the value - *and beauty* - of simplicity in programming.
+However, hearing about the new [Jai programming language](https://github.com/BSVino/JaiPrimer/blob/master/JaiPrimer.md) and the reasonings behind its inception (explained by the creator Jon Blow in some very interesting [videos](https://www.youtube.com/watch?v=TH9VCN6UkyQ) and [conferences](https://www.youtube.com/watch?v=uZgbKrDEzAs)), really got me thinking about the value - *and beauty* - of simplicity in programming.
 
 ## I love Kotlin, but damn is it complex
 
@@ -77,7 +77,7 @@ I learned what kind of languages are generally more hated, and which ones are lo
 
 ## The beauty of simple code
 
-I see beauty in simple code. I love the feeling of writing your first code lines when starting a project, before everything turns into a complex and unreadable mess.
+I see beauty in simple code. I love the feeling of writing your first lines of code when starting a project, before everything turns into a complex and unreadable mess.
 
 And suddenly, I am starting to feel attracted to simpler languages like C or Jai.
 
