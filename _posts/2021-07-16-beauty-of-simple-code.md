@@ -87,7 +87,7 @@ It's up to the developer to not use too many of the advanced features, that are 
 
 <blockquote>
   <p>
-    "With great power comes great responsability."
+    "With great power comes great responsibility."
   </p>
   <footer><cite title="Wise programmer">Uncle Ben, wise programmer and lover of simple code</cite></footer>
 </blockquote>
