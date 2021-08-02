@@ -3,8 +3,8 @@ title:       rants n' stuff
 email:       dariocostapena@gmail.com
 author:      Darío Costa
 description: ""
-baseurl:     "/personal-blog"
-url:         "https://dcostap.github.io"
+baseurl:     ""
+url:         "https://blog.dariocosta.dev"
 date_format: "%b %-d, %Y"
 header_pages:
 #  - about.md
