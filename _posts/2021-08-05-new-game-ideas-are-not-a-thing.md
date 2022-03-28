@@ -3,7 +3,7 @@ layout:     post
 title:      "New and unique game ideas are a thing of the past"
 ---
 
-Being a lazy hobbyist game developer for the last 8 years tought me that games are just too damn hard to make. And one of the hardest parts, at least for me, is Game Design.
+Being a lazy hobbyist game developer for the last 8 years has taught me that games are just too damn hard to make. And one of the hardest parts, at least for me, is Game Design.
 
 ## No new ideas anymore
 
@@ -13,7 +13,7 @@ Designing a game from the ground up is bound to result in failure: there is just
 
 ## Don't reinvent the wheel, make it unique and better
 
-The realisitc way to make new unique games nowadays is adding twists to an existing formula, without changing the core reason the other games following that formula were fun.
+The realistic way to make new unique games nowadays is adding twists to an existing formula, without changing the core reason the other games following that formula were fun.
 
 This is what I've been trying to do recently (without success), so I've come to admire games that managed to do it well. I think these are realistic examples of *game design done right*: rather than focusing on the famous games that created an archetype (Minecraft, Binding of Isaac), one should focus on the games that came after and improved upon them.
 
@@ -33,11 +33,11 @@ Monster Train greatly improves on this by making every fight more important (the
 
 ### Consumables are a nuisance in most games.
 
-Players like to shamelessly hoard disposable items in case they'll need them later. Slay the Spire did a good job on fixing the inherent game design problems by making it clear you can only hold a limited amount, but Monster Train shows that just straight up removing consumables might be the best decision.
+Players like to shamelessly hoard disposable items in case they'll need them later. Slay the Spire did a good job fixing the inherent game design problems by making it clear you can only hold a limited amount of consumables at once. But Monster Train proves that just straight up removing consumables might be the best decision.
 
 ### Some runs in Slay the Spire become an unwinnable slog.
 
-This happens in The Binding of Isaac too. It's a classic roguelite problem where you either get lucky and break the run, or it becomes a boring slog where you slowly realize you won't make it.
+This happens in The Binding of Isaac too. It's a classic roguelite problem where you either get lucky and break the game, or it becomes a boring slog where you slowly realize you won't make it.
 
 Monster Train, on the other hand, seems to be incredibly balanced, while still having so much content you can always find a cool synergy in  your deck. Furthermore, you always start each run with a special *champion* card, so you feel powerful from the ground up.
 

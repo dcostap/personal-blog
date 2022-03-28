@@ -76,24 +76,34 @@ h2,
   font-size: $h2;
 }
 
+h2::before, .h2::before {
+  content: "> ";
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+
 h3,
 .h3 {
   font-size: $h3;
+  font-weight: 400;
 }
 
 h4,
 .h4 {
   font-size: $h4;
+  font-weight: 400;
 }
 
 h5,
 .h5 {
   font-size: $h5;
+  font-weight: 400;
 }
 
 h6,
 .h6 {
   font-size: $h6;
+  font-weight: 400;
 }
 
 .list-reset {
