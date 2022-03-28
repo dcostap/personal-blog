@@ -15,8 +15,14 @@ h6 {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
   line-height: $heading-line-height;
-  margin-top: 2.5em;
-  margin-bottom: .5em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 2em;
 }
 
 p,
@@ -74,6 +80,7 @@ h1,
 h2,
 .h2 {
   font-size: $h2;
+  margin-top: 2.7em;
 }
 
 h2::before, .h2::before {
@@ -85,25 +92,21 @@ h2::before, .h2::before {
 h3,
 .h3 {
   font-size: $h3;
-  font-weight: 400;
 }
 
 h4,
 .h4 {
   font-size: $h4;
-  font-weight: 400;
 }
 
 h5,
 .h5 {
   font-size: $h5;
-  font-weight: 400;
 }
 
 h6,
 .h6 {
   font-size: $h6;
-  font-weight: 400;
 }
 
 .list-reset {

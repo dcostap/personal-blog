@@ -4,7 +4,7 @@
 }
 
 .posts .post {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.1em;
   border-bottom: thin solid #838383;
 }
 
@@ -15,7 +15,8 @@
 }
 
 .post-link .post-title {
-  margin-top: 0;
+  margin-bottom: 2em;
+  margin-top: 0.5em;
   font-weight: 600;
   color: $light-gray;
 }
@@ -35,7 +36,6 @@
 
 .meta,
 .post-meta {
-  width: auto;
   font-weight: 300;
   margin: 0;
   padding: .25em 0;

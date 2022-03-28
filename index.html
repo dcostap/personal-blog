@@ -5,11 +5,11 @@ layout: default
 
 <div class="home">
 	{% if posts_count > 0 %}
-	<div class="posts">
+	<div class="posts" style="display: flex; flex-wrap: wrap;">
 		{% for post in paginator.posts %}
-		<div class="post py3 post-link-contents">
-			<div style="display: flex; justify-content: left;">
-				<div class="post-meta" style="width: 10em; margin-right: 8px">
+		<div class="post py1 post-link-contents" style="flex: 1; min-width: 100%;">
+			<div style="justify-content: left;">
+				<div class="post-meta" style="margin-right: 1em;">
 					{% if site.date_format %}
 					{{ post.date | date: site.date_format }}
 					{% else %}
