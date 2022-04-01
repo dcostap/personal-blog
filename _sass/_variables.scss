@@ -2,18 +2,18 @@
 $base-font-size: 1.1rem !default;
 $small-screen-font-size: 1rem;
 $bold-font-weight: 600 !default;
-$font-family: 'Merriweather', 'Lora', 'Montserrat', 'Lato', 'PT Serif', Georgia, 'Times New Roman', serif !default;
+$font-family: "Merriweather", "Lora", "Montserrat", "Lato", "PT Serif", Georgia, "Times New Roman", serif !default;
 $line-height: 1.3 !default;
-$heading-font-family: 'Open Sans', 'Jost', 'Helvetica Neue', Helvetica, sans-serif !default;
+$heading-font-family: "Open Sans", "Jost", "Helvetica Neue", Helvetica, sans-serif !default;
 $heading-font-weight: 700 !default;
 $heading-line-height: 1.2 !default;
-$monospace-font-family: 'Source Code Pro', Consolas, monospace !default;
+$monospace-font-family: "Source Code Pro", Consolas, monospace !default;
 $h1: 2.1rem !default;
 $h2: 1.6rem !default;
 $h3: 1.2rem !default;
 $h4: 1rem !default;
-$h5: .85rem !default;
-$h6: .65rem !default;
+$h5: 0.85rem !default;
+$h6: 0.65rem !default;
 $h00: 4rem !default;
 $h0: 3rem !default;
 $h00-responsive: 8vw !default;
@@ -45,24 +45,52 @@ $dark-green: #009f06 !default;
 $light-pink: #ffdddd !default;
 $light-green: #ddffdd !default;
 $dark-gray: #303030 !default;
-$mid-gray:rgb(219, 219, 219) !default;
+$mid-gray: rgb(219, 219, 219) !default;
 $light-gray: rgb(236, 236, 236) !default;
 $lighter-gray: rgb(255, 255, 255) !default;
-$darken-1: rgba(#000,.0625) !default;
-$darken-2: rgba(#000,.125) !default;
-$darken-3: rgba(#000,.25) !default;
-$darken-4: rgba(#000,.5) !default;
+$darken-1: rgba(#000, 0.0625) !default;
+$darken-2: rgba(#000, 0.125) !default;
+$darken-3: rgba(#000, 0.25) !default;
+$darken-4: rgba(#000, 0.5) !default;
+
+
+// TODO implement light mode switch
+// (in-progress, the class selector doesn't work, always executes the css block)
+
+// https://derekkedziora.com/blog/dark-mode-revisited
+
+// html[data-theme="light"] {
+//     $blue: #0076df !global;
+//     $red: #f95020 !global;
+//     $green: #00cf26 !global;
+//     $yellow: #efcc00 !global;
+//     $orange: #ffcc22 !global;
+//     $purple: #f92080 !global;
+//     $dark-blue: #00369f !global;
+//     $green: #00ab37 !global;
+//     $dark-green: #009f06 !global;
+//     $light-pink: #ffdddd !global;
+//     $light-green: #ddffdd !global;
+//     $dark-gray: #ffffff !global;
+//     $mid-gray: rgb(221, 221, 221) !global;
+//     $light-gray: rgb(209, 209, 209) !global;
+//     $lighter-gray: rgb(212, 212, 212) !global;
+//     $darken-1: rgba(rgb(255, 255, 255), 0.0625) !global;
+//     $darken-2: rgba(rgb(255, 255, 255), 0.125) !global;
+//     $darken-3: rgba(rgb(255, 255, 255), 0.25) !global;
+//     $darken-4: rgba(rgb(255, 255, 255), 0.5) !global;
+// }
 
 // Links
 $link-color: $light-gray;
 $link-hover-color: $lighter-gray;
 
 // Breakpoints
-$breakpoint-md: '(min-width: 52em)';
-$breakpoint-xl: '(min-width: 96em)';
+$breakpoint-md: "(min-width: 52em)";
+$breakpoint-xl: "(min-width: 96em)";
 
 // Whitespace
-$space-1: .6rem !default;
+$space-1: 0.6rem !default;
 $space-2: 1.3rem !default;
 $space-3: 2.1rem !default;
 $space-4: 4.1rem !default;
@@ -71,15 +99,15 @@ $space-4: 4.1rem !default;
 $button-font-size: inherit !default;
 $button-font-weight: normal !default;
 $button-line-height: 1.125rem !default;
-$button-padding-y: .5rem !default;
+$button-padding-y: 0.5rem !default;
 $button-padding-x: 1rem !default;
 $button-font-family: $heading-font-family;
 
 // Forms
 $form-field-font-size: 1rem !default;
 $form-field-height: 2.25rem !default;
-$form-field-padding-y: .5rem !default;
-$form-field-padding-x: .5rem !default;
+$form-field-padding-y: 0.5rem !default;
+$form-field-padding-x: 0.5rem !default;
 
 // Borders
 $border-color: $light-gray !default;
@@ -89,8 +117,8 @@ $border-radius: 3px !default;
 // Forms
 $form-field-font-size: 1rem;
 $form-field-height: 2.25rem;
-$form-field-padding-y: .5rem;
-$form-field-padding-x: .5rem;
+$form-field-padding-y: 0.5rem;
+$form-field-padding-x: 0.5rem;
 
 // Code
 $pre-border-radius: 0;
@@ -133,4 +161,4 @@ $footer-padding: $space-3;
 $footer-color: #7a7a7a;
 $footer-bg-color: $dark-gray;
 $footer-font-weight: 300;
-$footer-font-size: .75rem;
+$footer-font-size: 0.75rem;
