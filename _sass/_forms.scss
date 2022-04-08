@@ -60,33 +60,33 @@ textarea {
 
 .field-light:focus {
   outline: none;
-  border-color: $blue;
-  box-shadow: 0 0 2px rgba($blue,.5);
+  border-color: var(--blue);
+  box-shadow: 0 0 2px rgba(var(--blue),.5);
 }
 
 .field-light:disabled {
-  color: $mid-gray;
-  background-color: $darken-2;
+  color: var(--mid-gray);
+  background-color: var(--darken-2);
 }
 
 .field-light:read-only:not(select) {
-  background-color: $darken-2;
+  background-color: var(--darken-2);
 }
 
 .field-light:invalid {
-  border-color: $red;
+  border-color: var(--red);
 }
 
 .field-light.is-success {
-  border-color: $green;
+  border-color: var(--green);
 }
 
 .field-light.is-warning {
-  border-color: $yellow;
+  border-color: var(--yellow);
 }
 
 .field-light.is-error {
-  border-color: $red;
+  border-color: var(--red);
 }
 
 
@@ -102,5 +102,5 @@ textarea {
 .radio-light:focus,
 .checkbox-light:focus {
   outline: none;
-  box-shadow: 0 0 2px rgba($blue, .5);
+  box-shadow: 0 0 2px rgba(var(--blue), .5);
 }

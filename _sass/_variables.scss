@@ -33,29 +33,31 @@ $viewport-medium: 33em;
 $viewport-large: 61em;
 
 // Colors
-$blue: #0076df !default;
-$red: #f95020 !default;
-$green: #00cf26 !default;
-$yellow: #efcc00 !default;
-$orange: #ffcc22 !default;
-$purple: #f92080 !default;
-$dark-blue: #00369f !default;
-$green: #00ab37 !default;
-$dark-green: #009f06 !default;
-$light-pink: #ffdddd !default;
-$light-green: #ddffdd !default;
-$dark-gray: #303030 !default;
-$mid-gray: rgb(219, 219, 219) !default;
-$light-gray: rgb(236, 236, 236) !default;
-$lighter-gray: rgb(255, 255, 255) !default;
-$darken-1: rgba(#000, 0.0625) !default;
-$darken-2: rgba(#000, 0.125) !default;
-$darken-3: rgba(#000, 0.25) !default;
-$darken-4: rgba(#000, 0.5) !default;
-$link-effect-color1: rgba(182, 233, 248, 0%);
-$link-effect-color2: rgba(182, 233, 248, 20%);
-$link-effect-color3: #444;
-$link-effect-color4: rgba(182, 233, 248, 20%);
+:root {
+--blue: #0076df;
+--red: #f95020;
+--green: #00cf26;
+--yellow: #efcc00;
+--orange: #ffcc22;
+--purple: #f92080;
+--dark-blue: #00369f;
+--green: #00ab37;
+--dark-green: #009f06;
+--light-pink: #ffdddd;
+--light-green: #ddffdd;
+--dark-gray: #303030;
+--mid-gray: rgb(219, 219, 219);
+--light-gray: rgb(236, 236, 236);
+--lighter-gray: rgb(255, 255, 255);
+--darken-1: rgba(#000, 0.0625);
+--darken-2: rgba(#000, 0.125);
+--darken-3: rgba(#000, 0.25);
+--darken-4: rgba(#000, 0.5);
+--link-effect-color1: rgba(182, 233, 248, 0%);
+--link-effect-color2: rgba(182, 233, 248, 20%);
+--link-effect-color3: #444;
+--link-effect-color4: rgba(193, 217, 231, 0.3);
+}
 
 // TODO implement light mode switch
 // (in-progress, the class selector doesn't work, always executes the css block)
@@ -63,35 +65,35 @@ $link-effect-color4: rgba(182, 233, 248, 20%);
 // https://derekkedziora.com/blog/dark-mode-revisited
 
 html[data-theme="light"] {
-    $blue: #0076df !global;
-    $red: #f95020 !global;
-    $green: #00cf26 !global;
-    $yellow: #efcc00 !global;
-    $orange: #ffcc22 !global;
-    $purple: #f92080 !global;
-    $dark-blue: #00369f !global;
-    $green: #00ab37 !global;
-    $dark-green: #009f06 !global;
-    $light-pink: #ffdddd !global;
-    $light-green: #ddffdd !global;
-    $dark-gray: rgb(246, 246, 246) !global;
-    $mid-gray: rgb(122, 122, 122) !global;
-    $light-gray: rgb(50, 50, 50) !global;
-    $lighter-gray: rgb(0, 0, 0) !global;
-    $darken-1: rgba(rgb(255, 255, 255), 0.0625) !global;
-    $darken-2: rgba(rgb(255, 255, 255), 0.125) !global;
-    $darken-3: rgba(rgb(255, 255, 255), 0.25) !global;
-    $darken-4: rgba(rgb(255, 255, 255), 0.5) !global;
-    $link-effect-color1: rgba(118, 140, 146, 0) !global;
-    $link-effect-color2: rgba(127, 161, 168, 0.2) !global;
-    $link-effect-color3: rgb(43, 43, 43) !global;
-    $link-effect-color4: rgb(199, 205, 207) !global;
+    --blue: #0076df;
+    --red: #f95020;
+    --green: #00cf26;
+    --yellow: #efcc00;
+    --orange: #ffcc22;
+    --purple: #f92080;
+    --dark-blue: #00369f;
+    --green: #00ab37;
+    --dark-green: #009f06;
+    --light-pink: #ffdddd;
+    --light-green: #ddffdd;
+    --dark-gray: rgb(246, 246, 246);
+    --mid-gray: rgb(122, 122, 122);
+    --light-gray: rgb(50, 50, 50);
+    --lighter-gray: rgb(0, 0, 0);
+    --darken-1: rgba(rgb(255, 255, 255), 0.0625);
+    --darken-2: rgba(rgb(255, 255, 255), 0.125);
+    --darken-3: rgba(rgb(255, 255, 255), 0.25);
+    --darken-4: rgba(rgb(255, 255, 255), 0.5);
+    --link-effect-color1: rgba(118, 140, 146, 0);
+    --link-effect-color2: rgba(127, 161, 168, 0.2);
+    --link-effect-color3: rgb(43, 43, 43);
+    --link-effect-color4: rgb(199, 205, 207);
     // $font-family: "Arial", "Merriweather", "Lora", "Montserrat", "Lato", "PT Serif", Georgia, "Times New Roman", sans !global;
 }
 
 // Links
-$link-color: $light-gray;
-$link-hover-color: $lighter-gray;
+$link-color: var(--light-gray);
+$link-hover-color: var(--lighter-gray);
 
 // Breakpoints
 $breakpoint-md: "(min-width: 52em)";
@@ -118,7 +120,7 @@ $form-field-padding-y: 0.5rem !default;
 $form-field-padding-x: 0.5rem !default;
 
 // Borders
-$border-color: $light-gray !default;
+$border-color: var(--light-gray) !default;
 $border-width: 1px !default;
 $border-radius: 3px !default;
 
@@ -130,48 +132,51 @@ $form-field-padding-x: 0.5rem;
 
 // Code
 $pre-border-radius: 0;
-$pre-background-color: $dark-gray;
+$pre-background-color: var(--dark-gray);
 $hljs-comment: rgb(207, 207, 207);
-$hljs-keyword: $light-gray;
-$hljs-name: $light-gray;
-$hljs-number: $dark-green;
-$hljs-string: $red;
-$hljs-title: $red;
-$hljs-type: $light-gray;
-$hljs-tag: $light-gray;
-$hljs-attribute: $dark-green;
-$hljs-regexp: $dark-green;
-$hljs-symbol: $purple;
-$hljs-built-in: $light-gray;
-$hljs-preprocessor: $mid-gray;
-$hljs-deletion: $light-pink;
-$hljs-addition: $light-green;
-$hljs-change: $light-gray;
-$hljs-chunk: $light-gray;
+$hljs-keyword: var(--light-gray);
+$hljs-name: var(--light-gray);
+$hljs-number: var(--dark-green);
+$hljs-string: var(--red);
+$hljs-title: var(--red);
+$hljs-type: var(--light-gray);
+$hljs-tag: var(--light-gray);
+$hljs-attribute: var(--dark-green);
+$hljs-regexp: var(--dark-green);
+$hljs-symbol: var(--purple);
+$hljs-built-in: var(--light-gray);
+$hljs-preprocessor: var(--mid-gray);
+$hljs-deletion: var(--light-pink);
+$hljs-addition: var(--light-green);
+$hljs-change: var(--light-gray);
+$hljs-chunk: var(--light-gray);
 
 // Header
 $header-border-top: thin solid #f3f3f3;
-$header-color: $light-gray;
-$header-bg-color: $dark-gray;
+$header-color: var(--light-gray);
+$header-bg-color: var(--dark-gray);
 $header-font-weight: 300;
 
 // Nav
-$nav-color: $mid-gray;
-$nav-link-color: rgb(240, 240, 240);
+$nav-color: var(--mid-gray);
 $nav-padding: $space-2;
 $nav-link-padding-x: $space-2;
 $nav-link-border-bottom: 2px solid #444;
-$nav-active-border-bottom: 1px solid $light-gray;
+$nav-active-border-bottom: 1px solid var(--light-gray);
 
 // Footer
 $footer-border-top: none;
 $footer-padding: $space-3;
 $footer-color: #7a7a7a;
-$footer-bg-color: $dark-gray;
+$footer-bg-color: var(--dark-gray);
 $footer-font-weight: 300;
 $footer-font-size: 0.75rem;
 
 
+:root {
+    --nav-link-color: rgb(240, 240, 240);
+}
+
 html[data-theme="light"] {
-    $nav-link-color: rgb(46, 46, 46) !global;
+    --nav-link-color: rgb(46, 46, 46);
 }

@@ -1,18 +1,18 @@
 /* Basscss Color Base */
 
 body {
-  color: $light-gray;
-  background-color:$dark-gray;
+  color: var(--light-gray);
+  background-color:var(--dark-gray);
 }
 
 a {
-  color: $blue;
+  color: var(--blue);
   text-decoration: none;
 }
 
 pre,
 code {
-  background-color: $lighter-gray;
+  background-color: var(--lighter-gray);
   border-radius: $border-radius;
 }
 

@@ -18,7 +18,7 @@
   margin-bottom: 2em;
   margin-top: 0.5em;
   font-weight: 600;
-  color: $light-gray;
+  color: var(--light-gray);
 }
 
 .post-footer {
@@ -39,7 +39,7 @@
   font-weight: 300;
   margin: 0;
   padding: .25em 0;
-  color: $mid-gray;
+  color: var(--mid-gray);
   font-style: italic;
 }
 

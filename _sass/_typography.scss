@@ -8,7 +8,7 @@ abbr {
 }
 
 p {
-  color:$light-gray;
+  color:var(--light-gray);
   line-height: 1.7;
   font-weight: 400;
 }

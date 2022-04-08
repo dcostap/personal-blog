@@ -1,7 +1,7 @@
 /* Basscss Colors */
 
 .dark-gray {
-  color: $dark-gray;
+  color: var(--dark-gray);
 }
 
 .white {
@@ -9,39 +9,39 @@
 }
 
 .blue {
-  color: $blue;
+  color: var(--blue);
 }
 
 .mid-gray {
-  color: $mid-gray;
+  color: var(--mid-gray);
 }
 
 .light-gray {
-  color: $light-gray;
+  color: var(--light-gray);
 }
 
 .lighter-gray {
-  color: $lighter-gray;
+  color: var(--lighter-gray);
 }
 
 .red {
-  color: $red;
+  color: var(--red);
 }
 
 .green {
-  color: $green;
+  color: var(--green);
 }
 
 .yellow {
-  color: $yellow;
+  color: var(--yellow);
 }
 
 .orange {
-  color: $orange;
+  color: var(--orange);
 }
 
 .bg-dark-gray {
-  background-color: $dark-gray;
+  background-color: var(--dark-gray);
 }
 
 .bg-white {
@@ -49,49 +49,49 @@
 }
 
 .bg-blue {
-  background-color: $blue;
+  background-color: var(--blue);
 }
 
 .bg-mid-gray {
-  background-color: $mid-gray;
+  background-color: var(--mid-gray);
 }
 
 .bg-light-gray {
-  background-color: $light-gray;
+  background-color: var(--light-gray);
 }
 
 .bg-lighter-gray {
-  background-color: $lighter-gray;
+  background-color: var(--lighter-gray);
 }
 
 .bg-red {
-  background-color: $red;
+  background-color: var(--red);
 }
 
 .bg-green {
-  background-color: $green;
+  background-color: var(--green);
 }
 
 .bg-yellow {
-  background-color: $yellow;
+  background-color: var(--yellow);
 }
 
 .bg-orange {
-  background-color: $orange;
+  background-color: var(--orange);
 }
 
 .bg-darken-1 {
-  background-color: $darken-1;
+  background-color: var(--darken-1);
 }
 
 .bg-darken-2 {
-  background-color: $darken-2;
+  background-color: var(--darken-2);
 }
 
 .bg-darken-3 {
-  background-color: $darken-3;
+  background-color: var(--darken-3);
 }
 
 .bg-darken-4 {
-  background-color: $darken-4;
+  background-color: var(--darken-4);
 }

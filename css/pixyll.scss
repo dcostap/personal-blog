@@ -56,11 +56,11 @@ blockquote:before {
     position: absolute;
     left: -10px;
     top: -20px;
-    color: $lighter-gray;
+    color: var(--lighter-gray);
 }
 
 blockquote cite {
-    color: $mid-gray;
+    color: var(--mid-gray);
     font-size: 0.9rem;
     display: block;
     margin-top: 5px;
