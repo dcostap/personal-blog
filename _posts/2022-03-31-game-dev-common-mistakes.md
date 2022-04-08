@@ -55,7 +55,9 @@ Game Design is too complex to pretend you'll get it perfect on your first try...
 
 I personally loathe ugly code, so I try my best to achieve "clean" but also quick solutions... I mostly fail at this though. I spend too much time on simple stuff, or overthinking how to best solve a problem, when it'd be best to just hardcode the solution and be done with it. The more I get better at this, the more I start to loathe [unneeded complexity and abstractions in code]({% post_url 2021-07-16-beauty-of-simple-code %}).
 
+
 ![Discord GameDev Community Screenshot](/assets/Discord_lyk8aZcKpc.png)
+
 <small>- Just your average indie gamedev overcomplicating everything</small>
 
 ## Wasting time on tools instead of the actual game

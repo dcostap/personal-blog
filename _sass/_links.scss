@@ -1,5 +1,9 @@
 .post-content a {
-  box-shadow: 0 10px 0 0 rgba(182, 233, 248, 0%), inset 0 -0.125em rgba(182, 233, 248, 20%);
+  box-shadow: 0 10px 0 0 $link-effect-color1, inset 0 -0.125em $link-effect-color2;
+}
+
+.post-content a:not(hover) {
+  box-shadow: 0 10px 0 0 $link-effect-color1, inset 0 -0.125em $link-effect-color4;
 }
 
 a {
@@ -24,11 +28,11 @@ a:hover {
 }
 
 a:not(.fa):not(.post-link):hover {
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid $link-effect-color3;
 }
 
 .post-content a:hover {
-  box-shadow: 0 1px 0 4px rgba(182, 233, 248, 10%), inset 0 -2em 0 rgba(182, 233, 248, 10%);
+  box-shadow: 0 1px 0 4px $link-effect-color1, inset 0 -2em 0 $link-effect-color2;
 }
 
 // Correct issues with buttons

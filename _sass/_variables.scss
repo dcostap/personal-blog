@@ -52,34 +52,42 @@ $darken-1: rgba(#000, 0.0625) !default;
 $darken-2: rgba(#000, 0.125) !default;
 $darken-3: rgba(#000, 0.25) !default;
 $darken-4: rgba(#000, 0.5) !default;
-
+$link-effect-color1: rgba(182, 233, 248, 0%);
+$link-effect-color2: rgba(182, 233, 248, 20%);
+$link-effect-color3: #444;
+$link-effect-color4: rgba(182, 233, 248, 20%);
 
 // TODO implement light mode switch
 // (in-progress, the class selector doesn't work, always executes the css block)
 
 // https://derekkedziora.com/blog/dark-mode-revisited
 
-// html[data-theme="light"] {
-//     $blue: #0076df !global;
-//     $red: #f95020 !global;
-//     $green: #00cf26 !global;
-//     $yellow: #efcc00 !global;
-//     $orange: #ffcc22 !global;
-//     $purple: #f92080 !global;
-//     $dark-blue: #00369f !global;
-//     $green: #00ab37 !global;
-//     $dark-green: #009f06 !global;
-//     $light-pink: #ffdddd !global;
-//     $light-green: #ddffdd !global;
-//     $dark-gray: #ffffff !global;
-//     $mid-gray: rgb(221, 221, 221) !global;
-//     $light-gray: rgb(209, 209, 209) !global;
-//     $lighter-gray: rgb(212, 212, 212) !global;
-//     $darken-1: rgba(rgb(255, 255, 255), 0.0625) !global;
-//     $darken-2: rgba(rgb(255, 255, 255), 0.125) !global;
-//     $darken-3: rgba(rgb(255, 255, 255), 0.25) !global;
-//     $darken-4: rgba(rgb(255, 255, 255), 0.5) !global;
-// }
+html[data-theme="light"] {
+    $blue: #0076df !global;
+    $red: #f95020 !global;
+    $green: #00cf26 !global;
+    $yellow: #efcc00 !global;
+    $orange: #ffcc22 !global;
+    $purple: #f92080 !global;
+    $dark-blue: #00369f !global;
+    $green: #00ab37 !global;
+    $dark-green: #009f06 !global;
+    $light-pink: #ffdddd !global;
+    $light-green: #ddffdd !global;
+    $dark-gray: rgb(246, 246, 246) !global;
+    $mid-gray: rgb(122, 122, 122) !global;
+    $light-gray: rgb(50, 50, 50) !global;
+    $lighter-gray: rgb(0, 0, 0) !global;
+    $darken-1: rgba(rgb(255, 255, 255), 0.0625) !global;
+    $darken-2: rgba(rgb(255, 255, 255), 0.125) !global;
+    $darken-3: rgba(rgb(255, 255, 255), 0.25) !global;
+    $darken-4: rgba(rgb(255, 255, 255), 0.5) !global;
+    $link-effect-color1: rgba(118, 140, 146, 0) !global;
+    $link-effect-color2: rgba(127, 161, 168, 0.2) !global;
+    $link-effect-color3: rgb(43, 43, 43) !global;
+    $link-effect-color4: rgb(199, 205, 207) !global;
+    // $font-family: "Arial", "Merriweather", "Lora", "Montserrat", "Lato", "PT Serif", Georgia, "Times New Roman", sans !global;
+}
 
 // Links
 $link-color: $light-gray;
@@ -162,3 +170,8 @@ $footer-color: #7a7a7a;
 $footer-bg-color: $dark-gray;
 $footer-font-weight: 300;
 $footer-font-size: 0.75rem;
+
+
+html[data-theme="light"] {
+    $nav-link-color: rgb(46, 46, 46) !global;
+}
