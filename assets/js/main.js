@@ -1,6 +1,14 @@
-window.onload = function () {
+window.addEventListener('DOMContentLoaded', (event) => {
+    const observer = new MutationObserver(list => {
+        const evt = new CustomEvent('dom-changed', { detail: list });
+        document.documentElement.dispatchEvent(evt)
+    });
+    observer.observe(document.documentElement, { attributes: true, childList: true, subtree: true });
+
+    document.documentElement.addEventListener("dom-changed", e => console.log(e));
+
     updateTheme();
-}
+})
 
 function updateTheme() {
     // check for the OS theme setting
@@ -18,7 +26,7 @@ function updateTheme() {
     }
 
     // if the OS changes theme, we override any configuration to match it
-    systemInitiatedDark.addListener(function() {
+    systemInitiatedDark.addListener(function () {
         sessionStorage.clear();
         updateTheme();
     });

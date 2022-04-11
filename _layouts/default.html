@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html data-theme="light" lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<!-- Use Alpine.js to change its internal variable "light" depending on the class data-theme, used by CSS to change the theme  -->
+<!-- Alpine's internal variable is then used for reactive changes in the page, like the icon -->
+<!-- (I needed to dispatch my custom event because the old DOM modification events were deprecated in favor of an observer pattern) -->
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" x-data="{ light: false }"
+  @dom-changed.self="light = $el.getAttribute('data-theme') == 'light'"
+>
 {% include head.html %}
 <body class="site{% if site.animated %} animated fade-in-down{% endif %}">
   {% if site.google_tag_manager %}
