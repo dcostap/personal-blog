@@ -57,6 +57,13 @@ $viewport-large: 61em;
 --link-effect-color2: rgba(182, 233, 248, 20%);
 --link-effect-color3: #444;
 --link-effect-color4: rgba(193, 217, 231, 0.3);
+
+--code-bg: var(--dark-gray);
+--code-functions: #5ab5f1;
+--code-comments: #928374;
+--code-text: #85be4e;
+--code-symbols: #fbe9c7;
+--code-normal-text: var(--lighter-gray);
 }
 
 // TODO implement light mode switch
@@ -88,7 +95,13 @@ html[data-theme="light"] {
     --link-effect-color2: rgba(127, 161, 168, 0.2);
     --link-effect-color3: rgb(43, 43, 43);
     --link-effect-color4: rgb(199, 205, 207);
-    // $font-family: "Arial", "Merriweather", "Lora", "Montserrat", "Lato", "PT Serif", Georgia, "Times New Roman", sans !global;
+
+--code-bg: #e7e9ec;
+--code-functions: #8250df;
+--code-comments: #6e7781;
+--code-text: #20466e;
+--code-symbols: rgb(0, 0, 0);
+--code-normal-text: var(--lighter-gray);
 }
 
 // Links
