@@ -25,7 +25,7 @@ $h1-responsive-max: 3.84rem !default;
 $abbr-border-bottom: 1px black dotted;
 
 // Page width
-$measure-width: 44rem !default;
+$measure-width: 42rem !default;
 
 // Viewport widths
 $viewport-small: 14em;
@@ -46,6 +46,8 @@ $viewport-large: 61em;
 --light-pink: #ffdddd;
 --light-green: #ddffdd;
 --dark-gray: #303030;
+--mid-darker-gray: rgb(70, 70, 70);
+--mid-dark-gray: rgb(180, 180, 180);
 --mid-gray: rgb(219, 219, 219);
 --light-gray: rgb(236, 236, 236);
 --lighter-gray: rgb(255, 255, 255);
@@ -84,6 +86,8 @@ html[data-theme="light"] {
     --light-pink: #ffdddd;
     --light-green: #ddffdd;
     --dark-gray: rgb(246, 246, 246);
+    --mid-darker-gray: rgb(220, 220, 220);
+    --mid-dark-gray: rgb(170, 170, 170);
     --mid-gray: rgb(122, 122, 122);
     --light-gray: rgb(50, 50, 50);
     --lighter-gray: rgb(0, 0, 0);

@@ -22,7 +22,7 @@ bing_verification:
 # Optional features
 animated:             false
 show_related_posts:   false
-show_post_footers:    false
+show_post_footers:    true
 show_social_icons:    true
 ajaxify_contact_form: false
 enable_mathjax: false
@@ -106,6 +106,8 @@ highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  auto_ids: true
+  auto_id_stripping: true
 
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
@@ -116,6 +118,7 @@ sass:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-toc
 # https://github.com/jekyll/jekyll/issues/2938
 exclude:
   - Gemfile
@@ -124,3 +127,10 @@ exclude:
   - README.md
   - screenshot.png
   - vendor
+
+# https://jekyllrb.com/docs/configuration/front-matter-defaults/
+defaults:
+  - scope:
+      path: ""
+    values:
+      toc: true

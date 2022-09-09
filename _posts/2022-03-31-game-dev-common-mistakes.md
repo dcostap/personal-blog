@@ -1,9 +1,9 @@
 ---
 layout:     post
 title:      "Game Development is not that hard. It's just that everyone makes the same mistakes time and time again"
+toc: true
 ---
 
-I've been lurking random game dev communities for ~5 years, and met many fellow indie gamedevs. I've learned a lot during this journey, but nothing that will get me close to finishing a game. In fact, it's actually getting me further and further away, thanks to the Dunning-Kruger effect:
 
 ![Dunning-Kruger](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Dunning%E2%80%93Kruger_Effect_01.svg/1200px-Dunning%E2%80%93Kruger_Effect_01.svg.png)
 
