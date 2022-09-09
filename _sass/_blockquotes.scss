@@ -3,6 +3,8 @@ blockquote {
   font-style: italic;
   margin-left: $space-1;
   padding: $space-1;
+  margin: 0em 0em 0em 0em;
+  max-width: 28rem;
 }
 
 blockquote footer {
