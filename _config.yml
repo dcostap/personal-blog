@@ -6,6 +6,7 @@ description: ""
 baseurl:     ""
 url:         "https://blog.dariocosta.dev"
 date_format: "%b %-d, %Y"
+destination: docs
 header_pages:
 #  - about.md
 #  - contact.html
