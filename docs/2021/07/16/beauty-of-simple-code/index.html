@@ -3,8 +3,7 @@
 <!-- Alpine's internal variable is then used for reactive changes in the page, like the icon -->
 <!-- (I needed to dispatch my custom event because the old DOM modification events were deprecated in favor of an observer pattern) -->
 <html lang="en" x-data="{ light: false }"
-  @dom-changed.self="light = $el.getAttribute('data-theme') == 'light'"
->
+      @dom-changed.self="light = $el.getAttribute('data-theme') == 'light'">
 <head>
   
   <meta charset="utf-8">
@@ -21,17 +20,17 @@
   <meta name="author" content="Darío Costa">
   
   <meta name="keywords" content="">
-  <link rel="canonical" href="https://blog.dariocosta.dev/2021/07/16/beauty-of-simple-code/">
+  <link rel="canonical" href="http://localhost:4000/2021/07/16/beauty-of-simple-code/">
   <link rel="alternate" type="application/rss+xml" title="RSS Feed for Rants n' stuff" href="/feed.xml" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/css/pixyll.css?202209121607" type="text/css">
+  <link rel="stylesheet" href="/css/pixyll.css?202209121612" type="text/css">
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src='https://blog.dariocosta.dev/assets/js/main.js'></script>
-  <script type="text/javascript" src='https://blog.dariocosta.dev/assets/js/toc.js'></script>
+  <script type="text/javascript" src='http://localhost:4000/assets/js/main.js'></script>
+  <script type="text/javascript" src='http://localhost:4000/assets/js/toc.js'></script>
 
   <!-- Fonts -->
   
@@ -63,7 +62,7 @@
   <meta property="og:type" content="article">
   <meta property="og:title" content="The beauty of simplicity in programming">
   <meta property="og:description" content="">
-  <meta property="og:url" content="https://blog.dariocosta.dev/2021/07/16/beauty-of-simple-code/">
+  <meta property="og:url" content="http://localhost:4000/2021/07/16/beauty-of-simple-code/">
   <meta property="og:site_name" content="Rants n' stuff">
   
 
@@ -75,7 +74,7 @@
   
   <meta name="twitter:title" content="The beauty of simplicity in programming" />
   <meta name="twitter:description" content="" />
-  <meta name="twitter:url" content="https://blog.dariocosta.dev/2021/07/16/beauty-of-simple-code/" />
+  <meta name="twitter:url" content="http://localhost:4000/2021/07/16/beauty-of-simple-code/" />
   
 
   <!-- Icons -->
@@ -98,9 +97,10 @@
   
 </head>
 
+
 <body class="site">
   
-	
+  
 
   <div class="site-wrap">
     <header class="site-header px2 px-responsive">
@@ -234,6 +234,7 @@
 </header>
 
 
+
     <div class="post p-responsive wrap" role="main">
       <div class="measure">
         
@@ -248,6 +249,16 @@
     3 minute read
   
   </span>
+</div>
+
+<div id="table-of-contents">
+  <div class="toc-wrapper">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#i-love-kotlin-but-damn-is-it-complex">I love Kotlin, but damn is it complex</a></li>
+<li class="toc-entry toc-h2"><a href="#the-programmers-journey">The programmer’s journey</a></li>
+<li class="toc-entry toc-h2"><a href="#the-beauty-of-simple-code">The beauty of simple code</a></li>
+</ul>
+  </div>
 </div>
 
 <article class="post-content">
@@ -487,7 +498,8 @@
   </div>
 </div>
 
-
+  
 
 </body>
+
 </html>

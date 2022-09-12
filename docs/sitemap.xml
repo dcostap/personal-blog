@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://blog.dariocosta.dev/2021/07/16/beauty-of-simple-code/</loc>
+<loc>http://localhost:4000/jekyll/pixyll/2014/06/10/pixyll-markdown-cheatsheet/</loc>
+<lastmod>2014-06-10T14:31:19+02:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2021/07/16/beauty-of-simple-code/</loc>
 <lastmod>2021-07-16T00:00:00+02:00</lastmod>
 </url>
 <url>
-<loc>https://blog.dariocosta.dev/2021/08/05/new-game-ideas-are-not-a-thing/</loc>
+<loc>http://localhost:4000/2021/08/05/new-game-ideas-are-not-a-thing/</loc>
 <lastmod>2021-08-05T00:00:00+02:00</lastmod>
 </url>
 <url>
-<loc>https://blog.dariocosta.dev/2022/03/31/game-dev-common-mistakes/</loc>
+<loc>http://localhost:4000/2022/03/31/game-dev-common-mistakes/</loc>
 <lastmod>2022-03-31T00:00:00+02:00</lastmod>
 </url>
 <url>
-<loc>https://blog.dariocosta.dev/</loc>
+<loc>http://localhost:4000/2022/09/12/sekiro-combat/</loc>
+<lastmod>2022-09-12T16:10:32+02:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
 </url>
 </urlset>
