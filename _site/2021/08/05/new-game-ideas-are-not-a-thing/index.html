@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!-- Use Alpine.js to change its internal variable "light" depending on the class data-theme, used by CSS to change the theme  -->
+<!-- Alpine's internal variable is then used for reactive changes in the page, like the icon -->
+<!-- (I needed to dispatch my custom event because the old DOM modification events were deprecated in favor of an observer pattern) -->
+<html lang="en" x-data="{ light: false }"
+  @dom-changed.self="light = $el.getAttribute('data-theme') == 'light'"
+>
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>New and unique game ideas are a thing of the past &#8211; Rants n' stuff</title>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <link rel="manifest" type="application/manifest+json; charset=utf-8" href="/manifest.json" />
+  <meta name="robots" content="all">
+  <meta name="author" content="Darío Costa">
+  
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://blog.dariocosta.dev/2021/08/05/new-game-ideas-are-not-a-thing/">
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for Rants n' stuff" href="/feed.xml" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/pixyll.css?202209121529" type="text/css">
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src='https://blog.dariocosta.dev/assets/js/main.js'></script>
+  <script type="text/javascript" src='https://blog.dariocosta.dev/assets/js/toc.js'></script>
+
+  <!-- Fonts -->
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap" rel="stylesheet">
+  <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&amp;subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Lato:600,300&amp;subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+  
+  
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  
+
+  <link rel="stylesheet" href="/css/code_snippet_syntax.css" />
+
+  <!-- MathJax -->
+  
+
+  <!-- Verifications -->
+  
+  
+
+  <!-- Open Graph -->
+  <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="New and unique game ideas are a thing of the past">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="https://blog.dariocosta.dev/2021/08/05/new-game-ideas-are-not-a-thing/">
+  <meta property="og:site_name" content="Rants n' stuff">
+  
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  
+      <meta name="twitter:site" content="@darencius3" />
+      <meta name="twitter:creator" content="@darencius3" />
+  
+  <meta name="twitter:title" content="New and unique game ideas are a thing of the past" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:url" content="https://blog.dariocosta.dev/2021/08/05/new-game-ideas-are-not-a-thing/" />
+  
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+</head>
+
+<body class="site">
+  
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">Rants n' stuff</a>
+     <nav class="site-nav">
+    <div style="line-height: 0.7rem; margin-top: -1.2rem;">
+        <div style="text-align: right;">
+            <a style="cursor: pointer;" onclick="themeSwitcher()">
+                <svg x-show="light" style="width: 1.5rem; margin-left: auto; margin-right: 0;" fill="none"
+                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="5"
+                          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <svg x-show="!light" style="width: 1.5rem; margin-left: auto; margin-right: 0;" fill="none"
+                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </a>
+        </div>
+        <br />
+        <a href="https://dcostap.github.io/personal-web/">> my webpage</a>
+    </div>
+    <!-- 
+
+
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+ -->
+</nav>
+<div class="clearfix"></div>
+
+<div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/dcostap"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-twitter" href="https://twitter.com/darencius3"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:dariocostapena@gmail.com"></a>
+    
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+
+    </div>
+  </div>
+</header>
+
+
+    <div id="table-of-contents">
+      <div class="toc-wrapper">
+        <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#no-new-ideas-anymore">No new ideas anymore</a></li>
+<li class="toc-entry toc-h2"><a href="#dont-reinvent-the-wheel-make-it-unique-and-better">Don’t reinvent the wheel, make it unique and better</a></li>
+<li class="toc-entry toc-h2"><a href="#case-study-monster-train-is-slay-the-spire-but-kinda-better-at-the-whole-deck-building-ordeal">Case study: Monster Train is Slay the Spire but kinda better at the whole deck-building ordeal</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#slay-the-spire-has-a-very-slow-start">Slay the Spire has a very slow start.</a></li>
+<li class="toc-entry toc-h3"><a href="#expanding-on-the-latter-slay-the-spire-has-too-many-filler-fights-and-runs-sometimes-drag-on">Expanding on the latter, Slay the Spire has too many “filler” fights, and runs sometimes drag on.</a></li>
+<li class="toc-entry toc-h3"><a href="#consumables-are-a-nuisance-in-most-games">Consumables are a nuisance in most games.</a></li>
+<li class="toc-entry toc-h3"><a href="#some-runs-in-slay-the-spire-become-an-unwinnable-slog">Some runs in Slay the Spire become an unwinnable slog.</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#a-new-hope">A new hope</a></li>
+</ul>
+      </div>
+    </div>
+
+    <div class="post p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>New and unique game ideas are a thing of the past</h1>
+  <span class="post-meta">Aug 5, 2021</span><br>
+  
+  <span class="post-meta small">
+  
+    4 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>Being a lazy hobbyist game developer for the last 8 years has taught me that games are just too damn hard to make. And one of the hardest parts, at least for me, is Game Design.</p>
+
+<h2 id="no-new-ideas-anymore">No new ideas anymore</h2>
+
+<p>There are so many games coming out every day that it’s no wonder there’s no real “new ideas” anymore.</p>
+
+<p>Designing a game from the ground up is bound to result in failure: there is just too much stuff that can go wrong. I’ve always wanted to create games that mixed many mechanics; games that felt and played like something you’ve never seen before… It’s no wonder I didn’t actually finish any.</p>
+
+<h2 id="dont-reinvent-the-wheel-make-it-unique-and-better">Don’t reinvent the wheel, make it unique and better</h2>
+
+<p>The realistic way to make new unique games nowadays is adding twists to an existing formula, without changing the core reason the other games following that formula were fun.</p>
+
+<p>This is what I’ve been trying to do recently (without success), so I’ve come to admire games that managed to do it well. I think these are realistic examples of <em>game design done right</em>: rather than focusing on the famous games that created an archetype (Minecraft, Binding of Isaac), one should focus on the games that came after and improved upon them.</p>
+
+<h2 id="case-study-monster-train-is-slay-the-spire-but-kinda-better-at-the-whole-deck-building-ordeal">Case study: Monster Train is Slay the Spire but kinda better at the whole deck-building ordeal</h2>
+
+<p>Slay the Spire is a great game with a really unique premise: a deck-building game meets a roguelike. Monster Train is a more recent release that falls in the same <em>category</em>, and it impressed me to no end. It achieves top marks in presentation, music, polish and amounts of content. But it also manages to improve so much in terms of Game Design.</p>
+
+<p>I had lots of fun with Slay the Spire, but it wasn’t until I played Monster Train that I realized all the flaws present in the original game that Monster Train gracefully improved upon:</p>
+
+<h3 id="slay-the-spire-has-a-very-slow-start">Slay the Spire has a very slow start.</h3>
+
+<p>The first fights will never make you lose the game, though if you are unfortunate your character could lose a bit of health. In either case, there isn’t much happening in the first 3 minutes. In contrast, Monster Train adds a set of random cards to your deck from the start, so you have to figure out a way to create synergies from the first fight onwards, and it makes the early-game a bit different each time.</p>
+
+<h3 id="expanding-on-the-latter-slay-the-spire-has-too-many-filler-fights-and-runs-sometimes-drag-on">Expanding on the latter, Slay the Spire has too many “filler” fights, and runs sometimes drag on.</h3>
+
+<p>Monster Train greatly improves on this by making every fight more important (there’s only 6-8 of them on each run, and each one of them has a Boss that can end your run).</p>
+
+<h3 id="consumables-are-a-nuisance-in-most-games">Consumables are a nuisance in most games.</h3>
+
+<p>Players like to shamelessly hoard disposable items in case they’ll need them later. Slay the Spire did a good job fixing the inherent game design problems by making it clear you can only hold a limited amount of consumables at once. But Monster Train proves that just straight up removing consumables might be the best decision.</p>
+
+<h3 id="some-runs-in-slay-the-spire-become-an-unwinnable-slog">Some runs in Slay the Spire become an unwinnable slog.</h3>
+
+<p>This happens in The Binding of Isaac too. It’s a classic roguelite problem where you either get lucky and break the game, or it becomes a boring slog where you slowly realize you won’t make it.</p>
+
+<p>Monster Train, on the other hand, seems to be incredibly balanced, while still having so much content you can always find a cool synergy in  your deck. Furthermore, you always start each run with a special <em>champion</em> card, so you feel powerful from the ground up.</p>
+
+<h2 id="a-new-hope">A new hope</h2>
+
+<p>It’s important to note, however, that Monster Train isn’t just <em>Slay the Spire but better</em>. They managed to fit unique elements that actually make the gameplay feel different.</p>
+
+<p>While Slay the Spire is still a great game, this goes to show just how much you can improve existing games, even when you think there’s not much room for it, but while also creating something that feels <em>new and fresh</em>.</p>
+
+<p>If anything, this is a hopeful message for bad game designers like me, who thought that since new ideas aren’t a thing anymore, all future games are bound to be clones of each other.</p>
+
+</article>
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="post-footer">
+  <div class="flex">
+    <p>
+      Thanks for reading!
+    </p>
+
+    <!-- TODO: fix flex to align everything horizontally -->
+    <!-- <nav class="site-nav">
+    <div style="line-height: 0.7rem; margin-top: -1.2rem;">
+        <div style="text-align: right;">
+            <a style="cursor: pointer;" onclick="themeSwitcher()">
+                <svg x-show="light" style="width: 1.5rem; margin-left: auto; margin-right: 0;" fill="none"
+                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="5"
+                          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <svg x-show="!light" style="width: 1.5rem; margin-left: auto; margin-right: 0;" fill="none"
+                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </a>
+        </div>
+        <br />
+        <a href="https://dcostap.github.io/personal-web/">> my webpage</a>
+    </div>
+    <!-- 
+
+
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+ -->
+</nav>
+<div class="clearfix"></div>
+
+<div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/dcostap"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-twitter" href="https://twitter.com/darencius3"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:dariocostapena@gmail.com"></a>
+    
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+ -->
+  </div>
+</div>
+
+
+
+</body>
+</html>

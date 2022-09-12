@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<!-- Use Alpine.js to change its internal variable "light" depending on the class data-theme, used by CSS to change the theme  -->
+<!-- Alpine's internal variable is then used for reactive changes in the page, like the icon -->
+<!-- (I needed to dispatch my custom event because the old DOM modification events were deprecated in favor of an observer pattern) -->
+<html lang="en" x-data="{ light: false }"
+  @dom-changed.self="light = $el.getAttribute('data-theme') == 'light'"
+>
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The beauty of simplicity in programming &#8211; Rants n' stuff</title>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <link rel="manifest" type="application/manifest+json; charset=utf-8" href="/manifest.json" />
+  <meta name="robots" content="all">
+  <meta name="author" content="Darío Costa">
+  
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://blog.dariocosta.dev/2021/07/16/beauty-of-simple-code/">
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for Rants n' stuff" href="/feed.xml" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/pixyll.css?202209121529" type="text/css">
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src='https://blog.dariocosta.dev/assets/js/main.js'></script>
+  <script type="text/javascript" src='https://blog.dariocosta.dev/assets/js/toc.js'></script>
+
+  <!-- Fonts -->
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap" rel="stylesheet">
+  <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&amp;subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Lato:600,300&amp;subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+  
+  
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  
+
+  <link rel="stylesheet" href="/css/code_snippet_syntax.css" />
+
+  <!-- MathJax -->
+  
+
+  <!-- Verifications -->
+  
+  
+
+  <!-- Open Graph -->
+  <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The beauty of simplicity in programming">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="https://blog.dariocosta.dev/2021/07/16/beauty-of-simple-code/">
+  <meta property="og:site_name" content="Rants n' stuff">
+  
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  
+      <meta name="twitter:site" content="@darencius3" />
+      <meta name="twitter:creator" content="@darencius3" />
+  
+  <meta name="twitter:title" content="The beauty of simplicity in programming" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:url" content="https://blog.dariocosta.dev/2021/07/16/beauty-of-simple-code/" />
+  
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+</head>
+
+<body class="site">
+  
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">Rants n' stuff</a>
+     <nav class="site-nav">
+    <div style="line-height: 0.7rem; margin-top: -1.2rem;">
+        <div style="text-align: right;">
+            <a style="cursor: pointer;" onclick="themeSwitcher()">
+                <svg x-show="light" style="width: 1.5rem; margin-left: auto; margin-right: 0;" fill="none"
+                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="5"
+                          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <svg x-show="!light" style="width: 1.5rem; margin-left: auto; margin-right: 0;" fill="none"
+                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </a>
+        </div>
+        <br />
+        <a href="https://dcostap.github.io/personal-web/">> my webpage</a>
+    </div>
+    <!-- 
+
+
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+ -->
+</nav>
+<div class="clearfix"></div>
+
+<div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/dcostap"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-twitter" href="https://twitter.com/darencius3"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:dariocostapena@gmail.com"></a>
+    
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+
+    </div>
+  </div>
+</header>
+
+
+    <div id="table-of-contents">
+      <div class="toc-wrapper">
+        <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#i-love-kotlin-but-damn-is-it-complex">I love Kotlin, but damn is it complex</a></li>
+<li class="toc-entry toc-h2"><a href="#the-programmers-journey">The programmer’s journey</a></li>
+<li class="toc-entry toc-h2"><a href="#the-beauty-of-simple-code">The beauty of simple code</a></li>
+</ul>
+      </div>
+    </div>
+
+    <div class="post p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>The beauty of simplicity in programming</h1>
+  <span class="post-meta">Jul 16, 2021</span><br>
+  
+  <span class="post-meta small">
+  
+    3 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p><a href="https://kotlinlang.org/">Kotlin</a> is an amazing programming language. I’ve been using it to code all my hobby projects for close to 4 years now, and after all this time I would only change 2 or 3 small things that mildly annoy me about its language design.</p>
+
+<p>However, hearing about the new <a href="https://github.com/BSVino/JaiPrimer/blob/master/JaiPrimer.md">Jai programming language</a> and the reasonings behind its inception (explained by the creator Jon Blow in some very interesting <a href="https://www.youtube.com/watch?v=TH9VCN6UkyQ">videos</a> and <a href="https://www.youtube.com/watch?v=uZgbKrDEzAs">conferences</a>), really got me thinking about the value - <em>and beauty</em> - of simplicity in programming.</p>
+
+<h2 id="i-love-kotlin-but-damn-is-it-complex">I love Kotlin, but damn is it complex</h2>
+
+<p>Kotlin is what I’d call a <strong>really complex language</strong>. It’s one of these modern programming languages that can do - <em>or try to do</em> - just about everything.</p>
+
+<p>They are object oriented, but also functional (<em>because it’s trendy</em>). But with most of them you could also theoreticallly do some procedural style programming.</p>
+
+<p>You can use Kotlin for desktop apps, but also Android applications… Oh, and now maybe you can use <a href="https://kotlinlang.org/docs/js-overview.html">Kotlin for the web too</a>. And I guess then there’s also <a href="https://kotlinlang.org/docs/native-overview.html">Kotlin native</a>.</p>
+
+<p>Furthermore, Kotlin is a very malleable programming language. You can take advantage of some of its more advanced features and turn the syntax into something more akin to markup languages:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">result</span><span class="p">()</span> <span class="p">=</span>
+    <span class="nf">html</span> <span class="p">{</span>
+        <span class="nf">head</span> <span class="p">{</span>
+            <span class="nf">title</span> <span class="p">{+</span><span class="s">"XML encoding with Kotlin"</span><span class="p">}</span>
+        <span class="p">}</span>
+        <span class="nf">body</span> <span class="p">{</span>
+            <span class="nf">h1</span> <span class="p">{+</span><span class="s">"XML encoding with Kotlin"</span><span class="p">}</span>
+            <span class="nf">p</span>  <span class="p">{+</span><span class="s">"this format can be used as an alternative markup to XML"</span><span class="p">}</span>
+
+            <span class="c1">// an element with attributes and text content</span>
+            <span class="nf">a</span><span class="p">(</span><span class="n">href</span> <span class="p">=</span> <span class="s">"https://kotlinlang.org"</span><span class="p">)</span> <span class="p">{+</span><span class="s">"Kotlin"</span><span class="p">}</span>
+
+            <span class="c1">// mixed content</span>
+            <span class="nf">p</span> <span class="p">{</span>
+                <span class="p">+</span><span class="s">"This is some"</span>
+                <span class="nf">b</span> <span class="p">{+</span><span class="s">"mixed"</span><span class="p">}</span>
+                <span class="p">+</span><span class="s">"text. For more see the"</span>
+                <span class="nf">a</span><span class="p">(</span><span class="n">href</span> <span class="p">=</span> <span class="s">"https://kotlinlang.org"</span><span class="p">)</span> <span class="p">{+</span><span class="s">"Kotlin"</span><span class="p">}</span>
+                <span class="p">+</span><span class="s">"project"</span>
+            <span class="p">}</span>
+            <span class="nf">p</span> <span class="p">{+</span><span class="s">"some text"</span><span class="p">}</span>
+
+            <span class="c1">// content generated by</span>
+            <span class="nf">p</span> <span class="p">{</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">arg</span> <span class="k">in</span> <span class="n">args</span><span class="p">)</span>
+                    <span class="p">+</span><span class="n">arg</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+</code></pre></div></div>
+
+<p><a href="https://kotlinlang.org/docs/type-safe-builders.html">The Kotlin docs site</a> from where I extracted this code snippet states:</p>
+
+<blockquote>
+  <p>This is completely legitimate Kotlin code.</p>
+</blockquote>
+
+<p><strong>“Yes, you may not believe it, but it’s actual Kotlin code.”</strong></p>
+
+<p>But is it really a good practice to reach such limits with a programming language?</p>
+
+<p>All of these options give the programmer a lot of control. I used many of Kotlin’s advanced features in my own game projects, and while they worked really well, sometimes I wonder if I’d be a happier programmer had I used a simpler language, with simpler features, that resulted in a simpler and more straightforward codebase.</p>
+
+<h2 id="the-programmers-journey">The programmer’s journey</h2>
+
+<p>For the last 4 or 5 years I’ve been through the start of a programmer’s journey.</p>
+
+<p>At the very start, you just focus on learning the syntax and the basics.</p>
+
+<p>Later on, you start to learn about the good and bad practices. As it turns out, there’s a lot of design and architecture work behind every codebase.</p>
+
+<p>I learned about design patterns, and popular books like Clean Code.</p>
+
+<p>I learned what kind of languages are generally more hated, and which ones are loved.</p>
+
+<p><strong>Eventually, I formed my own opinions</strong>. I seem to gravitate towards simplicity. I loathe the over-engineering encouraged by enterprise coding practices. I don’t like 99% of the advice exposed in the famous Clean Code book (luckily, <a href="https://qntm.org/clean">it seems that I am not alone in this</a>).</p>
+
+<h2 id="the-beauty-of-simple-code">The beauty of simple code</h2>
+
+<p>I see beauty in simple code. I love the feeling of writing your first lines of code when starting a project, before everything turns into a complex and unreadable mess.</p>
+
+<p>And suddenly, I am starting to feel attracted to simpler languages like C or Jai.</p>
+
+<p>I look forward to the day Jai releases, but I will probably still go back to Kotlin. After all, the complexity it introduces is still optional, and its language design does focus on reducing boilerplate and redundancy.</p>
+
+<p>It’s up to the developer to not use too many of the advanced features, that are probably unnecessary.</p>
+
+<blockquote>
+  <p>
+    "With great power comes great responsibility."
+  </p>
+  <footer><cite title="Wise programmer">Uncle Ben, wise programmer and lover of simple code</cite></footer>
+</blockquote>
+
+</article>
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="post-footer">
+  <div class="flex">
+    <p>
+      Thanks for reading!
+    </p>
+
+    <!-- TODO: fix flex to align everything horizontally -->
+    <!-- <nav class="site-nav">
+    <div style="line-height: 0.7rem; margin-top: -1.2rem;">
+        <div style="text-align: right;">
+            <a style="cursor: pointer;" onclick="themeSwitcher()">
+                <svg x-show="light" style="width: 1.5rem; margin-left: auto; margin-right: 0;" fill="none"
+                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="5"
+                          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <svg x-show="!light" style="width: 1.5rem; margin-left: auto; margin-right: 0;" fill="none"
+                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </a>
+        </div>
+        <br />
+        <a href="https://dcostap.github.io/personal-web/">> my webpage</a>
+    </div>
+    <!-- 
+
+
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+ -->
+</nav>
+<div class="clearfix"></div>
+
+<div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/dcostap"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-twitter" href="https://twitter.com/darencius3"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:dariocostapena@gmail.com"></a>
+    
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+ -->
+  </div>
+</div>
+
+
+
+</body>
+</html>

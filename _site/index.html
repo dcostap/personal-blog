@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<!-- Use Alpine.js to change its internal variable "light" depending on the class data-theme, used by CSS to change the theme  -->
+<!-- Alpine's internal variable is then used for reactive changes in the page, like the icon -->
+<!-- (I needed to dispatch my custom event because the old DOM modification events were deprecated in favor of an observer pattern) -->
+<html lang="en" x-data="{ light: false }"
+  @dom-changed.self="light = $el.getAttribute('data-theme') == 'light'"
+>
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Rants n' stuff</title>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <link rel="manifest" type="application/manifest+json; charset=utf-8" href="/manifest.json" />
+  <meta name="robots" content="all">
+  <meta name="author" content="Darío Costa">
+  
+  
+  <link rel="canonical" href="https://blog.dariocosta.dev/">
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for Rants n' stuff" href="/feed.xml" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/pixyll.css?202209121529" type="text/css">
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src='https://blog.dariocosta.dev/assets/js/main.js'></script>
+  <script type="text/javascript" src='https://blog.dariocosta.dev/assets/js/toc.js'></script>
+
+  <!-- Fonts -->
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap" rel="stylesheet">
+  <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&amp;subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Lato:600,300&amp;subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+  
+  
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  
+
+  <link rel="stylesheet" href="/css/code_snippet_syntax.css" />
+
+  <!-- MathJax -->
+  
+
+  <!-- Verifications -->
+  
+  
+
+  <!-- Open Graph -->
+  <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Rants n' stuff">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="https://blog.dariocosta.dev/">
+  <meta property="og:site_name" content="Rants n' stuff">
+  
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  
+      <meta name="twitter:site" content="@darencius3" />
+      <meta name="twitter:creator" content="@darencius3" />
+  
+  <meta name="twitter:title" content="Rants n' stuff" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:url" content="https://blog.dariocosta.dev/" />
+  
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+</head>
+
+<body class="site">
+  
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">Rants n' stuff</a>
+     <nav class="site-nav">
+    <div style="line-height: 0.7rem; margin-top: -1.2rem;">
+        <div style="text-align: right;">
+            <a style="cursor: pointer;" onclick="themeSwitcher()">
+                <svg x-show="light" style="width: 1.5rem; margin-left: auto; margin-right: 0;" fill="none"
+                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="5"
+                          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <svg x-show="!light" style="width: 1.5rem; margin-left: auto; margin-right: 0;" fill="none"
+                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </a>
+        </div>
+        <br />
+        <a href="https://dcostap.github.io/personal-web/">> my webpage</a>
+    </div>
+    <!-- 
+
+
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+ -->
+</nav>
+<div class="clearfix"></div>
+
+<div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/dcostap"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-twitter" href="https://twitter.com/darencius3"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:dariocostapena@gmail.com"></a>
+    
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+
+    </div>
+  </div>
+</header>
+
+
+    <div id="table-of-contents">
+      <div class="toc-wrapper">
+        <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#-posttitle-">{{ post.title }}</a></li>
+<li class="toc-entry toc-h1"><a href="#-sitetextindexcoming_soon-">{{ site.text.index.coming_soon }}</a></li>
+</ul>
+      </div>
+    </div>
+
+    <div class="post p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+<div class="home">
+	
+	<div class="posts" style="display: flex; flex-wrap: wrap;">
+		
+		<div class="post py1 post-link-contents" style="flex: 1; min-width: 100%;">
+			<div style="justify-content: left;">
+				<div class="post-meta" style="margin-right: 1em;">
+					
+					Mar 31, 2022
+					
+				</div>
+
+                <a href="/2022/03/31/game-dev-common-mistakes/" class="post-link">
+                    <h3 class="h4 post-title">Game Development is not that hard. It's just that everyone makes the same mistakes time and time again</h3>
+                    </a>
+			</div>
+
+			<!-- <span class="post-summary">
+            
+              <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Dunning%E2%80%93Kruger_Effect_01.svg/1200px-Dunning%E2%80%93Kruger_Effect_01.svg.png" alt="Dunning-Kruger" /></p>
+
+
+            
+          </span> -->
+		</div>
+		
+		<div class="post py1 post-link-contents" style="flex: 1; min-width: 100%;">
+			<div style="justify-content: left;">
+				<div class="post-meta" style="margin-right: 1em;">
+					
+					Aug 5, 2021
+					
+				</div>
+
+                <a href="/2021/08/05/new-game-ideas-are-not-a-thing/" class="post-link">
+                    <h3 class="h4 post-title">New and unique game ideas are a thing of the past</h3>
+                    </a>
+			</div>
+
+			<!-- <span class="post-summary">
+            
+              <p>Being a lazy hobbyist game developer for the last 8 years has taught me that games are just too damn hard to make. And one of the hardest parts, at least for me, is Game Design.</p>
+
+
+            
+          </span> -->
+		</div>
+		
+		<div class="post py1 post-link-contents" style="flex: 1; min-width: 100%;">
+			<div style="justify-content: left;">
+				<div class="post-meta" style="margin-right: 1em;">
+					
+					Jul 16, 2021
+					
+				</div>
+
+                <a href="/2021/07/16/beauty-of-simple-code/" class="post-link">
+                    <h3 class="h4 post-title">The beauty of simplicity in programming</h3>
+                    </a>
+			</div>
+
+			<!-- <span class="post-summary">
+            
+              <p><a href="https://kotlinlang.org/">Kotlin</a> is an amazing programming language. I’ve been using it to code all my hobby projects for close to 4 years now, and after all this time I would only change 2 or 3 small things that mildly annoy me about its language design.</p>
+
+
+            
+          </span> -->
+		</div>
+		
+	</div>
+
+	
+
+	
+</div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="post-footer">
+  <div class="flex">
+    <p>
+      Thanks for reading!
+    </p>
+
+    <!-- TODO: fix flex to align everything horizontally -->
+    <!-- <nav class="site-nav">
+    <div style="line-height: 0.7rem; margin-top: -1.2rem;">
+        <div style="text-align: right;">
+            <a style="cursor: pointer;" onclick="themeSwitcher()">
+                <svg x-show="light" style="width: 1.5rem; margin-left: auto; margin-right: 0;" fill="none"
+                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="5"
+                          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <svg x-show="!light" style="width: 1.5rem; margin-left: auto; margin-right: 0;" fill="none"
+                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </a>
+        </div>
+        <br />
+        <a href="https://dcostap.github.io/personal-web/">> my webpage</a>
+    </div>
+    <!-- 
+
+
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+ -->
+</nav>
+<div class="clearfix"></div>
+
+<div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/dcostap"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-twitter" href="https://twitter.com/darencius3"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:dariocostapena@gmail.com"></a>
+    
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+ -->
+  </div>
+</div>
+
+
+
+</body>
+</html>

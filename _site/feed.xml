@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rants n' stuff</title>
+    <description></description>
+    <link>https://blog.dariocosta.dev/</link>
+    <atom:link href="https://blog.dariocosta.dev/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Game Development is not that hard. It's just that everyone makes the same mistakes time and time again</title>
+        <description>&lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Dunning%E2%80%93Kruger_Effect_01.svg/1200px-Dunning%E2%80%93Kruger_Effect_01.svg.png&quot; alt=&quot;Dunning-Kruger&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What I’ve learned helped me notice all the silly mistakes I did in the past. I eventually reached the “Valley of Despair”, which is where I am staying right now. It’s a tricky place to be in: I know what I am doing wrong, but I am not skilled enough to bypass the mistakes or find the right solutions.&lt;/p&gt;
+
+&lt;p&gt;But now that I reached this valley, I can’t help but notice all the mistakes fellow indie gamedevs make time and time again.&lt;/p&gt;
+
+&lt;h2 id=&quot;no-prototyping-or-straight-up-running-ahead-with-your-game-idea-hoping-itll-turn-out-good&quot;&gt;No prototyping, or straight up running ahead with your game idea hoping it’ll turn out good&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;
+    The Isle of Elanor is an open-ended role-playing game, featuring a High Fantasy theme and setting.
+&lt;ul&gt;
+    &lt;li&gt;Branching Story Lines&lt;/li&gt;
+    &lt;li&gt;Character Building&lt;/li&gt;
+    &lt;li&gt;Factional Alignment&lt;/li&gt;
+    &lt;li&gt;Character Progression&lt;/li&gt;
+    &lt;li&gt;Combat Mechanics and Variety&lt;/li&gt;
+    &lt;li&gt;Consequences&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/p&gt;
+  &lt;footer&gt;&lt;cite title=&quot;Wise programmer&quot;&gt;&lt;a href=&quot;https://www.commonwombat.com/blog/&quot;&gt;The Isle of Elanor&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This game has “Combat Mechanics and Variety”, “Consequences”, “Character Building”… I mean, it’s a recipe for success!&lt;/p&gt;
+
+&lt;p&gt;Most game ideas are vague at their best, or plain bad at their worst. And yet, game developers seem to hate prototyping them - me included.&lt;/p&gt;
+
+&lt;p&gt;I hate prototypes because they require you to write ugly code that just kinda works, and play a game with moving squares for graphics. I don’t have fun doing that kind of game development, so I mostly ignore prototypes. That means I waste a lot of time just testing the most basic ideas I have… But I still have a clear objective in mind: testing the idea. I just happen to prioritize having fun while doing it: enjoying coding and enjoying making a cool looking prototype. And when it turns out it’s boring… Welp, at least I had fun and I finished something that looks good in screenshots!&lt;/p&gt;
+
+&lt;p&gt;However, some people take this problem to the extreme. They keep developing a game for years, with worryingly vague ideas set in stone because they sound good in their heads. They put a lot of effort into something that’s just a mix of common mechanics, hoping that the game will turn out fun because it mixes a bit of everything.&lt;/p&gt;
+
+&lt;h2 id=&quot;worrying-about-clean-or-mantainable-code-during-the-initial-stages&quot;&gt;Worrying about clean or mantainable code during the initial stages&lt;/h2&gt;
+
+&lt;p&gt;Even when indie gamedevs avoid the previous mistake (by having a clear objective: testing your idea and iterating on it), I see many of them pouring too much effort into their codebase. When the game is still taking its shape, the focus should be on quick &amp;amp; dirty code that lets you easily make changes and iterate.&lt;/p&gt;
+
+&lt;p&gt;Bob Nystrom said it best:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;
+    If you are going to ditch code, don’t waste time making it pretty. Rock stars trash hotel rooms because they know they’re going to check out the next day.
+  &lt;/p&gt;
+  &lt;footer&gt;&lt;cite title=&quot;Wise programmer&quot;&gt;&lt;a href=&quot;https://gameprogrammingpatterns.com/architecture-performance-and-games.html#get-on-with-it,-already&quot;&gt;Game Programming Patterns / Introduction&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Game Design is too complex to pretend you’ll get it perfect on your first try… Your game idea can’t stay in your head or in a Game Design Document. You oughta get the game up and running, and actually test your ideas and designs by playing the product. Ugly code and quick solutions are the way to go.&lt;/p&gt;
+
+&lt;p&gt;I personally loathe ugly code, so I try my best to achieve “clean” but also quick solutions… I mostly fail at this though. I spend too much time on simple stuff, or overthinking how to best solve a problem, when it’d be best to just hardcode the solution and be done with it. The more I get better at this, the more I start to loathe &lt;a href=&quot;/2021/07/16/beauty-of-simple-code/&quot;&gt;unneeded complexity and abstractions in code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/Discord_lyk8aZcKpc.png&quot; alt=&quot;Discord GameDev Community Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;- Just your average indie gamedev overcomplicating everything&lt;/small&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;wasting-time-on-tools-instead-of-the-actual-game&quot;&gt;Wasting time on tools instead of the actual game&lt;/h2&gt;
+
+&lt;p&gt;This is a really bad sign. The truth may be that the developer got bored of the game idea, so he decides to invest time and effort into tools that &lt;em&gt;may&lt;/em&gt; help him in the future. This way you won’t feel like you are pausing the project; it’s just a small break from the game itself, until the motivation comes back later (&lt;em&gt;it never does&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;I, too, made this mistake in the past. Pouring time on premature optimization always feels like a productive and fun task. Outside of gamedev, I always get carried away optimizing my coding workflow… I spend hours on stuff that will actually save me minutes in the long run.&lt;/p&gt;
+
+&lt;h3 id=&quot;lemme-just-make-a-custom-map-editor-real-quick&quot;&gt;“Lemme just make a custom map editor real quick”&lt;/h3&gt;
+&lt;p&gt;A common example of this kind of mistake is developing a fleshed-out custom map editor for the game, when there are already a lot of &lt;a href=&quot;https://www.mapeditor.org/&quot;&gt;free&lt;/a&gt;, &lt;a href=&quot;https://ldtk.io/&quot;&gt;polished&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://github.com/Ogmo-Editor-3/OgmoEditor3-CE&quot;&gt;ever-evolving&lt;/a&gt; options available.&lt;/p&gt;
+
+&lt;p&gt;To be fair, a map editor is one of the easiest tools to get up and running, since you only need to add some basic functionality on top of the game code you already have. But when it gets to the point where you are adding advanced options like a custom script system or support for exporting the map to external file formats… Maybe that’s a bit too much.&lt;/p&gt;
+
+&lt;p&gt;The latter (exporting maps to external files) adds so much complexity: now you need to define rules for everything your map editor supports, so all the info in it can be serialized. And then you need to write the import &amp;amp; export code. And when everything breaks, you’ll have to go back to that codebase, pausing the actual game development yet again.&lt;/p&gt;
+
+&lt;h3 id=&quot;lets-edit-all-the-particle-effects-in-a-gui-itll-be-so-cool-and-awesome&quot;&gt;Let’s edit all the particle effects in a GUI, it’ll be so cool and awesome&lt;/h3&gt;
+
+&lt;p&gt;I never understood GUI particle editors. They have the development complexity of a custom map editor, but its benefits aren’t as clear to me.&lt;/p&gt;
+
+&lt;p&gt;I too like to juice my games (to worrying levels) with cool animations and particles, so when I wanna add some cool particle effects… I just do it in code. It’s straightforward and lets me have all the flexibility I want. I don’t need to formally define which properties a particle effect should have, so then I can write the serialization logic, the editor interface, etc… The whole concept seems like a nightmare to develop &amp;amp; mantain.&lt;/p&gt;
+
+&lt;p&gt;These tools sound cool in theory, and they certainly have some advantages, the biggest one being the support for modding… But this will only be useful if the game actually gets finished.&lt;/p&gt;
+
+&lt;h2 id=&quot;in-conclusion&quot;&gt;In conclusion…&lt;/h2&gt;
+
+&lt;p&gt;I don’t actually believe in what the title says (clickbait much?); it’s really hard to finish a game, and when you do there’s a minuscule chance it will turn out to be good. There’s so much stuff that can go wrong: games are comprised of many different parts that require different kinds of skills.&lt;/p&gt;
+
+&lt;p&gt;The best thing you can do as a game developer is to fail faster so you can improve faster; and the most common mistakes I see prevent just that.&lt;/p&gt;
+
+&lt;p&gt;Roll the dice more times and you will get more chances to finish an actually good game.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 31 Mar 2022 00:00:00 +0200</pubDate>
+        <link>https://blog.dariocosta.dev/2022/03/31/game-dev-common-mistakes/</link>
+        <guid isPermaLink="true">https://blog.dariocosta.dev/2022/03/31/game-dev-common-mistakes/</guid>
+      </item>
+    
+      <item>
+        <title>New and unique game ideas are a thing of the past</title>
+        <description>&lt;p&gt;Being a lazy hobbyist game developer for the last 8 years has taught me that games are just too damn hard to make. And one of the hardest parts, at least for me, is Game Design.&lt;/p&gt;
+
+&lt;h2 id=&quot;no-new-ideas-anymore&quot;&gt;No new ideas anymore&lt;/h2&gt;
+
+&lt;p&gt;There are so many games coming out every day that it’s no wonder there’s no real “new ideas” anymore.&lt;/p&gt;
+
+&lt;p&gt;Designing a game from the ground up is bound to result in failure: there is just too much stuff that can go wrong. I’ve always wanted to create games that mixed many mechanics; games that felt and played like something you’ve never seen before… It’s no wonder I didn’t actually finish any.&lt;/p&gt;
+
+&lt;h2 id=&quot;dont-reinvent-the-wheel-make-it-unique-and-better&quot;&gt;Don’t reinvent the wheel, make it unique and better&lt;/h2&gt;
+
+&lt;p&gt;The realistic way to make new unique games nowadays is adding twists to an existing formula, without changing the core reason the other games following that formula were fun.&lt;/p&gt;
+
+&lt;p&gt;This is what I’ve been trying to do recently (without success), so I’ve come to admire games that managed to do it well. I think these are realistic examples of &lt;em&gt;game design done right&lt;/em&gt;: rather than focusing on the famous games that created an archetype (Minecraft, Binding of Isaac), one should focus on the games that came after and improved upon them.&lt;/p&gt;
+
+&lt;h2 id=&quot;case-study-monster-train-is-slay-the-spire-but-kinda-better-at-the-whole-deck-building-ordeal&quot;&gt;Case study: Monster Train is Slay the Spire but kinda better at the whole deck-building ordeal&lt;/h2&gt;
+
+&lt;p&gt;Slay the Spire is a great game with a really unique premise: a deck-building game meets a roguelike. Monster Train is a more recent release that falls in the same &lt;em&gt;category&lt;/em&gt;, and it impressed me to no end. It achieves top marks in presentation, music, polish and amounts of content. But it also manages to improve so much in terms of Game Design.&lt;/p&gt;
+
+&lt;p&gt;I had lots of fun with Slay the Spire, but it wasn’t until I played Monster Train that I realized all the flaws present in the original game that Monster Train gracefully improved upon:&lt;/p&gt;
+
+&lt;h3 id=&quot;slay-the-spire-has-a-very-slow-start&quot;&gt;Slay the Spire has a very slow start.&lt;/h3&gt;
+
+&lt;p&gt;The first fights will never make you lose the game, though if you are unfortunate your character could lose a bit of health. In either case, there isn’t much happening in the first 3 minutes. In contrast, Monster Train adds a set of random cards to your deck from the start, so you have to figure out a way to create synergies from the first fight onwards, and it makes the early-game a bit different each time.&lt;/p&gt;
+
+&lt;h3 id=&quot;expanding-on-the-latter-slay-the-spire-has-too-many-filler-fights-and-runs-sometimes-drag-on&quot;&gt;Expanding on the latter, Slay the Spire has too many “filler” fights, and runs sometimes drag on.&lt;/h3&gt;
+
+&lt;p&gt;Monster Train greatly improves on this by making every fight more important (there’s only 6-8 of them on each run, and each one of them has a Boss that can end your run).&lt;/p&gt;
+
+&lt;h3 id=&quot;consumables-are-a-nuisance-in-most-games&quot;&gt;Consumables are a nuisance in most games.&lt;/h3&gt;
+
+&lt;p&gt;Players like to shamelessly hoard disposable items in case they’ll need them later. Slay the Spire did a good job fixing the inherent game design problems by making it clear you can only hold a limited amount of consumables at once. But Monster Train proves that just straight up removing consumables might be the best decision.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-runs-in-slay-the-spire-become-an-unwinnable-slog&quot;&gt;Some runs in Slay the Spire become an unwinnable slog.&lt;/h3&gt;
+
+&lt;p&gt;This happens in The Binding of Isaac too. It’s a classic roguelite problem where you either get lucky and break the game, or it becomes a boring slog where you slowly realize you won’t make it.&lt;/p&gt;
+
+&lt;p&gt;Monster Train, on the other hand, seems to be incredibly balanced, while still having so much content you can always find a cool synergy in  your deck. Furthermore, you always start each run with a special &lt;em&gt;champion&lt;/em&gt; card, so you feel powerful from the ground up.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-new-hope&quot;&gt;A new hope&lt;/h2&gt;
+
+&lt;p&gt;It’s important to note, however, that Monster Train isn’t just &lt;em&gt;Slay the Spire but better&lt;/em&gt;. They managed to fit unique elements that actually make the gameplay feel different.&lt;/p&gt;
+
+&lt;p&gt;While Slay the Spire is still a great game, this goes to show just how much you can improve existing games, even when you think there’s not much room for it, but while also creating something that feels &lt;em&gt;new and fresh&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;If anything, this is a hopeful message for bad game designers like me, who thought that since new ideas aren’t a thing anymore, all future games are bound to be clones of each other.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 05 Aug 2021 00:00:00 +0200</pubDate>
+        <link>https://blog.dariocosta.dev/2021/08/05/new-game-ideas-are-not-a-thing/</link>
+        <guid isPermaLink="true">https://blog.dariocosta.dev/2021/08/05/new-game-ideas-are-not-a-thing/</guid>
+      </item>
+    
+      <item>
+        <title>The beauty of simplicity in programming</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/&quot;&gt;Kotlin&lt;/a&gt; is an amazing programming language. I’ve been using it to code all my hobby projects for close to 4 years now, and after all this time I would only change 2 or 3 small things that mildly annoy me about its language design.&lt;/p&gt;
+
+&lt;p&gt;However, hearing about the new &lt;a href=&quot;https://github.com/BSVino/JaiPrimer/blob/master/JaiPrimer.md&quot;&gt;Jai programming language&lt;/a&gt; and the reasonings behind its inception (explained by the creator Jon Blow in some very interesting &lt;a href=&quot;https://www.youtube.com/watch?v=TH9VCN6UkyQ&quot;&gt;videos&lt;/a&gt; and &lt;a href=&quot;https://www.youtube.com/watch?v=uZgbKrDEzAs&quot;&gt;conferences&lt;/a&gt;), really got me thinking about the value - &lt;em&gt;and beauty&lt;/em&gt; - of simplicity in programming.&lt;/p&gt;
+
+&lt;h2 id=&quot;i-love-kotlin-but-damn-is-it-complex&quot;&gt;I love Kotlin, but damn is it complex&lt;/h2&gt;
+
+&lt;p&gt;Kotlin is what I’d call a &lt;strong&gt;really complex language&lt;/strong&gt;. It’s one of these modern programming languages that can do - &lt;em&gt;or try to do&lt;/em&gt; - just about everything.&lt;/p&gt;
+
+&lt;p&gt;They are object oriented, but also functional (&lt;em&gt;because it’s trendy&lt;/em&gt;). But with most of them you could also theoreticallly do some procedural style programming.&lt;/p&gt;
+
+&lt;p&gt;You can use Kotlin for desktop apps, but also Android applications… Oh, and now maybe you can use &lt;a href=&quot;https://kotlinlang.org/docs/js-overview.html&quot;&gt;Kotlin for the web too&lt;/a&gt;. And I guess then there’s also &lt;a href=&quot;https://kotlinlang.org/docs/native-overview.html&quot;&gt;Kotlin native&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, Kotlin is a very malleable programming language. You can take advantage of some of its more advanced features and turn the syntax into something more akin to markup languages:&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;XML encoding with Kotlin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;XML encoding with Kotlin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;p&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;this format can be used as an alternative markup to XML&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;// an element with attributes and text content&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;href&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://kotlinlang.org&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Kotlin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;// mixed content&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;This is some&quot;&lt;/span&gt;
+                &lt;span class=&quot;nf&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mixed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text. For more see the&quot;&lt;/span&gt;
+                &lt;span class=&quot;nf&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;href&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://kotlinlang.org&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Kotlin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;project&quot;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;some text&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;// content generated by&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/docs/type-safe-builders.html&quot;&gt;The Kotlin docs site&lt;/a&gt; from where I extracted this code snippet states:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is completely legitimate Kotlin code.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;“Yes, you may not believe it, but it’s actual Kotlin code.”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;But is it really a good practice to reach such limits with a programming language?&lt;/p&gt;
+
+&lt;p&gt;All of these options give the programmer a lot of control. I used many of Kotlin’s advanced features in my own game projects, and while they worked really well, sometimes I wonder if I’d be a happier programmer had I used a simpler language, with simpler features, that resulted in a simpler and more straightforward codebase.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-programmers-journey&quot;&gt;The programmer’s journey&lt;/h2&gt;
+
+&lt;p&gt;For the last 4 or 5 years I’ve been through the start of a programmer’s journey.&lt;/p&gt;
+
+&lt;p&gt;At the very start, you just focus on learning the syntax and the basics.&lt;/p&gt;
+
+&lt;p&gt;Later on, you start to learn about the good and bad practices. As it turns out, there’s a lot of design and architecture work behind every codebase.&lt;/p&gt;
+
+&lt;p&gt;I learned about design patterns, and popular books like Clean Code.&lt;/p&gt;
+
+&lt;p&gt;I learned what kind of languages are generally more hated, and which ones are loved.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Eventually, I formed my own opinions&lt;/strong&gt;. I seem to gravitate towards simplicity. I loathe the over-engineering encouraged by enterprise coding practices. I don’t like 99% of the advice exposed in the famous Clean Code book (luckily, &lt;a href=&quot;https://qntm.org/clean&quot;&gt;it seems that I am not alone in this&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;the-beauty-of-simple-code&quot;&gt;The beauty of simple code&lt;/h2&gt;
+
+&lt;p&gt;I see beauty in simple code. I love the feeling of writing your first lines of code when starting a project, before everything turns into a complex and unreadable mess.&lt;/p&gt;
+
+&lt;p&gt;And suddenly, I am starting to feel attracted to simpler languages like C or Jai.&lt;/p&gt;
+
+&lt;p&gt;I look forward to the day Jai releases, but I will probably still go back to Kotlin. After all, the complexity it introduces is still optional, and its language design does focus on reducing boilerplate and redundancy.&lt;/p&gt;
+
+&lt;p&gt;It’s up to the developer to not use too many of the advanced features, that are probably unnecessary.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;
+    &quot;With great power comes great responsibility.&quot;
+  &lt;/p&gt;
+  &lt;footer&gt;&lt;cite title=&quot;Wise programmer&quot;&gt;Uncle Ben, wise programmer and lover of simple code&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Fri, 16 Jul 2021 00:00:00 +0200</pubDate>
+        <link>https://blog.dariocosta.dev/2021/07/16/beauty-of-simple-code/</link>
+        <guid isPermaLink="true">https://blog.dariocosta.dev/2021/07/16/beauty-of-simple-code/</guid>
+      </item>
+    
+  </channel>
+</rss>

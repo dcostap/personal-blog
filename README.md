@@ -1,1 +1,0 @@
-## Just a simple Jekyll blog. I tweaked and customized the Pixyll theme to achieve my own look.
