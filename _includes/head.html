@@ -31,7 +31,9 @@
 
   <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
   <script type="text/javascript" src='{{ base.url | prepend: site.url }}/assets/js/main.js'></script>
-  <script type="text/javascript" src='{{ base.url | prepend: site.url }}/assets/js/toc.js'></script>
+
+  <!-- THIS BROKE WITH LATEST COLLECTIONS CHANGES, I WASN'T USING TOC.JS ANYWAYS SO NO POINT IN ADAPTING IT TO WORK -->
+  <!-- <script type="text/javascript" src='{{ base.url | prepend: site.url }}/assets/js/toc.js'></script> -->
 
   <!-- Fonts -->
   {% if site.extended_fonts %}

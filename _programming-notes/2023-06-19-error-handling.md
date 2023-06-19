@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Error handling - Common issues and best modern approaches.
+title:      "Error handling - Common issues and best modern approaches."
 ---
 
 > This is a set of personal notes and thoughts, most of which were compiled after reading this [great blog entry by Joe Duffy](https://joeduffyblog.com/2016/02/07/the-error-model/)

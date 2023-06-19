@@ -13,7 +13,7 @@ $(document).ready(function () {
         document.querySelector("#table-of-contents .toc-wrapper").innerHTML += svg_html;
     })();
 
-    // Jekyll renders everything on one level, so nested titles are not actuall
+    // Jekyll renders everything on one level, so nested titles are not actually
     // nested in the DOM. We need to manually create the levels.
     const contentElems = document.querySelector(".post-content").children;
     // A `tocItem` is a dictionary.

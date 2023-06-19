@@ -53,7 +53,7 @@ Bob Nystrom said it best:
 
 Game Design is too complex to pretend you'll get it perfect on your first try... Your game idea can't stay in your head or in a Game Design Document. You oughta get the game up and running, and actually test your ideas and designs by playing the product. Ugly code and quick solutions are the way to go.
 
-I personally loathe ugly code, so I try my best to achieve "clean" but also quick solutions... I mostly fail at this though. I spend too much time on simple stuff, or overthinking how to best solve a problem, when it'd be best to just hardcode the solution and be done with it. The more I get better at this, the more I start to loathe [unneeded complexity and abstractions in code]({% post_url 2021-07-16-beauty-of-simple-code %}).
+I personally loathe ugly code, so I try my best to achieve "clean" but also quick solutions... I mostly fail at this though. I spend too much time on simple stuff, or overthinking how to best solve a problem, when it'd be best to just hardcode the solution and be done with it. The more I get better at this, the more I start to loathe [unneeded complexity and abstractions in code]({% link _rants-and-opinion-pieces/2021-07-16-beauty-of-simple-code.md %}).
 
 
 ![Discord GameDev Community Screenshot](/assets/Discord_lyk8aZcKpc.png)

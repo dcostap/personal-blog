@@ -1,12 +1,15 @@
 ---
 layout: default
 ---
-{% assign posts_count = paginator.posts | size %}
+<!-- {% assign posts_count = paginator.posts | size %} -->
 
 <div class="home">
-	{% if posts_count > 0 %}
 	<div class="posts" style="display: flex; flex-wrap: wrap;">
-		{% for post in paginator.posts %}
+		{% for collection in site.collections %}
+		{% if collection.docs != empty %}
+		<h2>{{ collection.title }}</h2>
+		{% endif %}
+		{% for post in collection.docs %}
 		<div class="post py1 post-link-contents" style="flex: 1; min-width: 100%;">
 			<div style="justify-content: left;">
 				<div class="post-meta" style="margin-right: 1em;">
@@ -17,24 +20,23 @@ layout: default
 					{% endif %}
 				</div>
 
-                <a href="{{ post.url | relative_url }}" class="post-link">
-                    <h3 class="h4 post-title">{{ post.title }}</h3>
-                    </a>
+				<a href="{{ post.url | relative_url }}" class="post-link">
+					<h3 class="h4 post-title">{{ post.title }}</h3>
+				</a>
 			</div>
 
 			<!-- <span class="post-summary">
-            {% if post.summary %}
-              {{ post.summary }}
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </span> -->
+						{% if post.summary %}
+						{{ post.summary }}
+						{% else %}
+						{{ post.excerpt }}
+						{% endif %}
+					</span> -->
 		</div>
+		{% endfor %}
 		{% endfor %}
 	</div>
 
-	{% include pagination.html %}
-	{% else %}
-	<h1 class='center'>{{ site.text.index.coming_soon }}</h1>
-	{% endif %}
+	<!-- {% include pagination.html %} -->
+	<!-- <h1 class='center'>{{ site.text.index.coming_soon }}</h1> -->
 </div>

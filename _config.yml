@@ -110,10 +110,18 @@ kramdown:
   auto_ids: true
   auto_id_stripping: true
 
+collections:
+  programming-notes:
+    output: true
+    title: Programming Notes
+  rants-and-opinion-pieces:
+    output: true
+    title: Rants and Opinions
+
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
-paginate:     10
+paginate:     10 # not used
 sass:
   style: compressed
 plugins:
