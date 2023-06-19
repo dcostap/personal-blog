@@ -26,13 +26,13 @@ Assertions can be used to...
 - validate a function's arguments. These assertions - ideally placed at the start of a function's body -  will crash the program if any argument is wrong. They also cleanly and explicitly state what arguments are invalid.
 - explicitly marking what conditions _can't_ be true at a certain point according to programmer's assumptions about how the program should work. These assertions mostly provide peace of mind and allow early crashes.
 
-While assertions are never 100% needed - during these invalid states, supposedly the program would crash later anyway - they are a good resource to help the program crash as early as possible.
+While assertions are never 100% needed - during these invalid states, supposedly, the program would crash later anyway - they are a good resource to help the program crash as early as possible.
 
 ## Exceptions
 Unlike bugs, exceptions are invalid states that may arise outside of the the programmer's control. As such, handling these is a requirement for a robust codebase.
 
 The best kind of exception-handling paradigm would feature:
-- call-site transparency: when you call a function, is it clear it may cause an exception. Java's whole `Exception` system fails at this.
+- call-site transparency: when you call a function, is it clear it may cause an exception? Java's whole `Exception` system fails at this.
 - no special control flow when an exception happens. This simplifies error handling by being just another  part of the normal control flow. Java's `try / catch / finally` way of handling exceptions has a goto-feel. From first glance, you don't know which functions may throw an Exception. And when they do, the execution jumps to a separate code block...
 - simplicity when defining the possible exceptions. Java fails at this too. No matter how small the exception is, you are supposed to choose and pick from a big open hierarchy of built-in Exceptions - so most programmers just may throw a generic Exception or return null (which isn't safe at all in Java and the root of most runtime crashes due to oversights).
 - sealed exception types. There must be a **defined and closed set** of possible failure types. The compiler will then warn you whenever you handle an error and miss to consider one of the exception possibilities, or when you add a new type of error and miss handling that new case everywhere it's needed.
@@ -48,7 +48,7 @@ Implementing exceptions as complex return data types (Result<MyErrorType, Int>) 
 - forced to handle the possible exceptions since the resulting value is hidden inside that data type - the user has to "unbox" the data to actually use the resulting value.
 - the docs / info for possible exceptions is embedded into the function signature itself (return type) without special syntax (`throws`).
 - since the return type you are interested in is the one data type that also contains the possible exceptions, call-site calls clearly show which functions may return exceptions.
-- simple to define your exceptions. They are just lightweight data types (can be just simple enums you create or some standard (`Result` / `Either`) generic container), and they can be complex if needed (to contain more info about the exception that happened)
+- simple to define your exceptions. They are just lightweight data types (can be just simple enums you create or some standard - `Result` / `Either` - generic container), and they can be complex if needed (to contain more info about the exception that happened)
 - exception handling isn't restricted to a special block or a different kind of control-flow.
 
 As a downside, the way to "unbox" the useful value may be cumbersome and adds more lines of code on each callsite. Some libraries try to implement many functional concepts to handle / accumulate / process these complex return values, and the resulting code becomes too complex.
