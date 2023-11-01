@@ -26,6 +26,7 @@ Here, the stacktrace would be also printed to the console, and the GUI may even 
 I like assertions. I try to use kotlin's `require()` and `check()` more and more. They are great for peace of mind and to document the assumptions you have about things that "must be true" at a given point in your code.
 - `require()` internally throws a `IllegalArgumentException`; it's meant to validate a function's arguments. Write it at the start of each function; it's the best way to docuemnt that a certain passed Int must never be `< 0`, etc.
 - `check()` is used in my codebases for any other assumption that _must_ be true in the middle of my business logic. With Kotlin's smart casting, it can help you auto-casting a nullable value into non-null for the rest of the code:
+
 ```kotlin
 var value: Type? = null
 // (...) some complex logic that ultimately assigns argument a non-null value.
