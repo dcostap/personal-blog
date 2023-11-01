@@ -29,7 +29,7 @@ I like assertions. I try to use kotlin's `require()` and `check()` more and more
 ```kotlin
 var value: Type? = null
 // (...) some complex logic that ultimately assigns argument a non-null value.
-// However this logic is too complex for the compiler to be sure that the value gets always assigned, so we have to init the variable with a null value.
+// However, this logic is too complex for the compiler to be sure that the value gets always assigned, so we have to init the variable with a null value.
 
 // here, a null argument would be a logic error
 check(value != null)
