@@ -6,7 +6,7 @@ title:      "Error handling in Kotlin - My current approach."
 > This is kind of an add-on to my other post abut error-handling in general.
 
 Kotlin is in a bit of a special place in terms of error handling, since it took on some baggage by having to coexist with Java. 
-As such, many consider the state of Kotlin to be imperfect. I agree to an extent, since unlike Rust there's no one true standard way to handle errors.
+As such, many consider the state of Kotlin's error handling to be imperfect. I agree to an extent, since unlike Rust there's no one true standard way to handle errors.
 
 The closest we have to an standard is a post by the Kotlin lead: [https://elizarov.medium.com/kotlin-and-exceptions-8062f589d07](). 
 However, many argue that his solution of "writing specific sealed classes to represent each failure case" is imperfect and kotlin's stdlib doesn't even follow that advice most of the time.
