@@ -59,7 +59,7 @@ Most of the time though, I simply use kotlin's `runCatching` which does this wra
 
 ## Explictly using Exceptions?
 
-The [https://elizarov.medium.com/kotlin-and-exceptions-8062f589d07](blog post) I mentioned at the start, written by the Kotlin project lead, mentions the hairy case of handling I/O errors. 
+The [blog post](https://elizarov.medium.com/kotlin-and-exceptions-8062f589d07) I mentioned at the start, written by the Kotlin project lead, mentions the hairy case of handling I/O errors. 
 They aren't bugs, yet handling every single I/O function call with `Result` becomes verbose and annoying, since many calls like these may be packed together in long functions. 
 In this case, I do what the blog post recommends, and I let those calls throw their java Exceptions normally, or even throw the Exceptions myself if needed. 
 Then, **I wrap the relevant piece of code in a `runCatching`** or similar. 
