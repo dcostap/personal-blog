@@ -37,16 +37,18 @@ check(value != null)
 // from now on, argument is auto-casted to be a non-null Type, no need for further null-checks
 ```
 
-# How I handle expected exceptional cases
+# How I handle expected / anticipated errors
 
-For most simple cases I use nullable types. Kotlin's null safety plus its null-checking syntax makes this a great way to handle the possibility of failure.
+For most simple cases (to just encode the absence of a result), I use nullable types. Kotlin's null safety plus its null-checking syntax makes this a great way to handle the possibility of failure.
  
-However, this won't do whenever I want to return extra information about why something failed, or which one of a closed-set of failures this was.
-This is where error-handling in Kotlin gets complex, as there's no standard solution. 
+However, this won't do whenever I want to return extra information about why something failed, or encode which one of a closed-set of failures this one belongs in.
+This is where error-handling in Kotlin gets complex, as there's no standard solution.
  
 Some people use [libraries](https://github.com/arrow-kt/arrow) that embrace functional-style error types, drawing inspiration from Rust and other languages. 
 
 I decided to pick a simpler approach and use Kotlin's `Result`. While imperfect, it suits my needs.
+
+Thus, all the functions that may fail (in expected and known ways) to return the expected value, will return a `Result<MyValue>`.
 
 ## Interfacing with java code
 
@@ -55,12 +57,18 @@ This means that unfortunately you never know if a java method you are calling ma
 Thus, I have to be careful and consider the Exceptions each java method may throw, and consider which ones I am interested in to wrap them in my kotlin `Result`.
 Most of the time though, I simply use kotlin's `runCatching` which does this wrapping for me. However, it's an imperfect solution once again (it catches all Exceptions, including those that are considered errors, like `RuntimeException`).
 
-## Explictly using Exceptions
+## Explictly using Exceptions?
 
-The only case in which I use Exceptions is whenever I want to provide an early exit for a complex function that may have multiple points of failure. 
-This allows me to more easily propagate errors and exit a function, without having to add multiple checks with their own `return` (which gets verbose when inside nested lambdas). With exceptions, I just need to use constructs like `getOrThrow()` or a explicit `throw`.
+The [https://elizarov.medium.com/kotlin-and-exceptions-8062f589d07](blog post) I mentioned at the start, written by the Kotlin project lead, mentions the hairy case of handling I/O errors. 
+They aren't bugs, yet handling every single I/O function call with `Result` becomes verbose and annoying, since many calls like these may be packed together in long functions. 
+In this case, I do what the blog post recommends, and I let those calls throw their java Exceptions normally, or even throw the Exceptions myself if needed. 
+Then, **I wrap the relevant piece of code in a `runCatching`** or similar. 
 
-Then, I wrap the relevant piece of code in a `runCatching`.
+The point here, I/O or not, is to leverage `throw Exceptions` to provide **simple and non-verbose early exits inside a long piece of code that may have multiple points of failure.**
+
+Even without dealing with I/O, I use this to sometimes more easily propagate errors and exit a function, without having to add multiple checks with their own `return` (which gets verbose when inside nested lambdas). With exceptions, I just need to use constructs like `getOrThrow()` or a explicit `throw`.
+
+At the end, of course, you're left with a `Result` that you return.
 
 ## The downsides
 
