@@ -57,7 +57,7 @@ Thus, all the functions that may fail (in expected and known ways) to return the
 This is a bit tricky since Kotlin decided to do away with java's checked Exceptions. 
 This means that unfortunately you never know if a java method you are calling may throw a Exception.
 Thus, I have to be careful and consider the Exceptions each java method may throw, and consider which ones I am interested in to wrap them in my kotlin `Result`.
-Most of the time though, I simply use kotlin's `runCatching` which does this wrapping for me. However, it's an imperfect solution once again (it catches all Exceptions, including those that are considered errors, like `RuntimeException`).
+Most of the time though, I simply use kotlin's `runCatching` which does this wrapping for me. However, it's an imperfect solution once again (it catches all Exceptions, including those that are bugs, like with most `RuntimeException`).
 
 ## Explictly using Exceptions?
 
