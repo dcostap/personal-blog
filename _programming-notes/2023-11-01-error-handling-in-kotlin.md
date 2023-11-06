@@ -14,6 +14,7 @@ However, many argue that his solution of "writing specific sealed classes to rep
 # How I handle bugs
 
 Bugs: exceptional cases the programmer can't handle, since they represent an oversight or an incorrect state of the program - "handling" them means... fixing the bug. 
+
 I leverage java's Exception system here. 
 
 If a bug happens, the end result should be always the same: forcefully exiting your current execution point and crash with a helpful stacktrace / show the user a message.
