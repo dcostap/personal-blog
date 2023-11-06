@@ -5,9 +5,7 @@ title:      "Error handling - Common issues and best modern approaches."
 
 > This is a set of personal notes and thoughts, most of which were compiled after reading this [great blog entry by Joe Duffy](https://joeduffyblog.com/2016/02/07/the-error-model/)
 
-Unlike other aspects of programming, error handling seems to me like one of the few problems to have a few known best practices and pitfalls (gathered after decades of imperfect error handling paradigms implemented in old languages).
-
-And like with all other programming areas, there still isn't a "one true right way" to do error handling. However, analyzing the pitfalls of each approach seemed to be very easy, given that all modern languages iterated on the old ways of doing error handling in common and logical ways.
+Just like with all other programming areas, there still isn't a "one true right way" to do error handling. However, analyzing the pitfalls of each approach seemed easy, given that all modern languages iterated on the old ways of doing error handling in common and logical ways.
 
 Consequently, I have compiled a personal compendium of notes and preferred strategies for error handling, which I hope will serve as a useful reference to whoever lost soul happens to stumble upon this blog entry.
 
