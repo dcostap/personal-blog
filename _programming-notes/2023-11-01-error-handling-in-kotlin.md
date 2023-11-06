@@ -46,7 +46,7 @@ For most simple cases (to just encode the absence of a result), I use nullable t
 However, this won't be enough if I want to return extra information about why something failed, or encode which one of a closed-set of failures this one belongs in.
 This is where error-handling in Kotlin gets a bit more complex, as there's no standard solution - you've got to pick your poison.
  
-Some people use [libraries](https://github.com/arrow-kt/arrow) that embrace functional-style error types, drawing inspiration from Rust and other languages. 
+Some people use [libraries](https://github.com/arrow-kt/arrow) that embrace functional-style error types, drawing inspiration from Rust and probably other languages. 
 
 I decided to pick a simpler approach and use Kotlin's `Result`. While imperfect, it suits my needs.
 
