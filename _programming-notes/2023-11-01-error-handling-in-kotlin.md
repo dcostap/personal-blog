@@ -43,8 +43,8 @@ check(value != null)
 
 For most simple cases (to just encode the absence of a result), I use nullable types. Kotlin's null safety plus its null-checking syntax makes this a great way to handle the possibility of failure.
  
-However, this won't do whenever I want to return extra information about why something failed, or encode which one of a closed-set of failures this one belongs in.
-This is where error-handling in Kotlin gets complex, as there's no standard solution.
+However, this won't be enough if I want to return extra information about why something failed, or encode which one of a closed-set of failures this one belongs in.
+This is where error-handling in Kotlin gets a bit more complex, as there's no standard solution - you've got to pick your poison.
  
 Some people use [libraries](https://github.com/arrow-kt/arrow) that embrace functional-style error types, drawing inspiration from Rust and other languages. 
 
