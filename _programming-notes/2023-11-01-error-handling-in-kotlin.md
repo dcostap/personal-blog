@@ -24,20 +24,9 @@ Here, the stacktrace would be also printed to the console, and the GUI may even 
 
 ## Assertions: explicitly catching bugs early
 
-I like assertions. I try to use kotlin's `require()` and `check()` more and more. They are great for peace of mind and to document the assumptions you have about things that "must be true" at a given point in your code.
+I like assertions. I try to use kotlin's `require()` and `check()` more and more. They are great for peace of mind and to document the assumptions you have about things that "must be true" at a given point in your code. As a bonus, these kind of checks in Kotlin also become a useful way to trigger smart-casting.
 - `require()` internally throws a `IllegalArgumentException`; it's meant to validate a function's arguments. Write it at the start of each function; it's the best way to document that a certain passed Int must never be `< 0`, etc.
-- `check()` is used in my codebases for any other assumption that _must_ be true in the middle of my business logic. With Kotlin's smart casting, it can help you auto-casting a nullable value into non-null for the rest of the code, etc:
-
-```kotlin
-var value: Type? = null
-// (...) some complex logic that ultimately assigns argument a non-null value.
-// However, this logic is too complex for the compiler to be sure that the value gets always assigned, so we have to init the variable with a null value.
-
-// here, a null argument would be a logic error
-check(value != null)
-
-// from now on, argument is auto-casted to be a non-null Type, no need for further null-checks
-```
+- `check()` is used in my codebases for any other assumption that _must_ be true in the middle of my business logic.
 
 # How I handle expected / anticipated errors
 
