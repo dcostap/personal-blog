@@ -24,7 +24,7 @@ Here, the stacktrace would be also printed to the console, and the GUI may even 
 
 ## Assertions: explicitly catching bugs early
 
-I like assertions. I try to use kotlin's `require()` and `check()` more and more. They are great for peace of mind and to document the assumptions you have about things that "must be true" at a given point in your code. As a bonus, these kind of checks in Kotlin also become a useful way to trigger smart-casting.
+I like assertions. I try to use kotlin's `require()` and `check()` more and more. They are great for peace of mind and to document the assumptions you have about things that "must be true" at a given point in your code. As a bonus, in Kotlin, these kind of checks also become a useful way to trigger smart-casting.
 - `require()` internally throws a `IllegalArgumentException`; it's meant to validate a function's arguments. Write it at the start of each function; it's the best way to document that a certain passed Int must never be `< 0`, etc.
 - `check()` is used in my codebases for any other assumption that _must_ be true in the middle of my business logic.
 
