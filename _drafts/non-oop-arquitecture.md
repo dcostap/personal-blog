@@ -8,7 +8,7 @@ title:      "So... How do people write non-OOP code, exactly?"
   <p>
     Well, we’re object-oriented programmers programming objects in an object-oriented language...
   </p>
-  <footer><cite title="Eric Lippert's blog"><a href="[https://youtu.be/IRTfhkiAqPw?t=228](https://ericlippert.com/2015/05/04/wizards-and-warriors-part-three/#:~:text=Well%2C%20we%E2%80%99re%20object%2Doriented%20programmers%20programming%20objects%20in%20an%20object%2Doriented%20language)"> Eric Lippert's blog</a></cite></footer>
+  <footer><cite title="Eric Lippert's blog"><a href="https://ericlippert.com/2015/05/04/wizards-and-warriors-part-three/#:~:text=Well%2C%20we%E2%80%99re%20object%2Doriented%20programmers%20programming%20objects%20in%20an%20object%2Doriented%20language"> Eric Lippert's blog</a></cite></footer>
 </blockquote>
 
 As one of many programmers who started learning coding with OOP-style languages, my way of thinking about code is always biased towards OOP. Even after learning to prevent its overuse (and to appreciate simple and straightforward code), I still find myself gravitating towards structuring the code in terms of classes - methods - properties. 
